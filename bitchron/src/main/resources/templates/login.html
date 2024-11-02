@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitChron</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-</head>
+<head th:replace="~{/fragments/head}"></head>
 
 <body id="loginBody">
     <div id="loginPageBrandImg">
-        <a href="index.html" class="navbar-brand text active fs-3 fw-bold" href="#">
+        <a th:href="@{/index}" class="navbar-brand text active fs-3 fw-bold">
           <img
-            src="images/icons8-watch-96.png"
+            th:src="@{images/icons8-watch-96.png}"
             alt=""
             width="64"
             height="64"
@@ -64,7 +58,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
         </script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
 </body>
 
 </html>

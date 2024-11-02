@@ -1,9 +1,22 @@
 package bg.softuni.bitchron.entity;
 
-public class UserEntity {
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "users")
+public class UserEntity extends BaseEntity {
+    @Column
     private String username;
+
+    @Column
     private String password;
+
+    @Column
     private String firstName;
+
+    @Column
     private String lastName;
 
     public String getUsername() {

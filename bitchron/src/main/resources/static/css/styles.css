@@ -162,7 +162,7 @@
 /* Hero section */
 .hero {
     /* background: linear-gradient(rgba(255, 155, 207, 0.507), rgba(255, 155, 207, 0.438)), url(images/wallpaperflare.com_wallpaper\(1\).jpg); */
-    background: url(images/Watch\ Banner.png);
+    background: url('../images/Watch-Banner.png');
     background-position: center;
     background-size: cover;
     transform: translate(0%, 4.4rem);
@@ -440,11 +440,11 @@ footer {
 
 #loginBody,
 #registerBody {
-    background-image: url(images/login-page-bg-img.png);
+    background-image: url('../images/login-page-bg-img.png');
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 110vh;
+    min-height: 100vh;
     background-position: center center;
     background-size: cover;
 }
