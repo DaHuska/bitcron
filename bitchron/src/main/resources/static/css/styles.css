@@ -1,0 +1,651 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --c-brand-bg-rgb: 255, 155, 207;
+}
+
+.navbar, #supporters {
+    background: #0f1633;
+}
+
+.navbar {
+    border-bottom: 2px solid #9aacc9;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav-item {
+    margin: 0 1.5rem;
+}
+
+/* .nav-link:hover {
+    transform: translateY(10px);
+    transition: transform 0.5s ease;
+} */
+
+.nav-link {
+    border-radius: 1.2rem;
+}
+
+.nav-link:hover {
+    background-color: #5569f0;
+    color: white !important;
+    transition: 0.5s;
+}
+
+.navbar-brand, .nav-link, .banner__buttons, h1, h5, h4 {
+    color: #9aacc9 !important;
+}
+
+.search__bar {
+    width: 100%;
+    margin: 0 20%;
+    clear: both;
+}
+
+.bi-stopwatch {
+    position: absolute;
+    top: 50%;
+    opacity: 0.2;
+    margin-top: -1%;
+    margin-left: -1%;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(154, 172, 201, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler {
+    border-color: #9aacc9 !important;
+}
+
+/* Broken animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Nearly works, the watch should be perfect shape to not make it look sus */
+/* .rotate, img {
+    animation: rotate 2s linear infinite;
+} */
+
+.profile__icon, .nav-link {
+    color: #9aacc9;
+}
+
+.profile__icon:hover {
+    background-color: #5569f0;
+    color: #ffffff !important;
+    transition: 0.4s;
+}
+
+.sub-menu-wrap {
+    right: 3%;
+    width: 250px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.sub-menu {
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    background-color: #1d243e;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 12px 0;
+}
+
+.sub-menu-link p {
+    width: 100%;
+    margin: 0 10px;
+    color: #9aacc9;
+}
+
+.sub-menu-link:hover {
+    background-color: #5569f0;
+    transition: 0.5s;
+}
+
+.sub-menu-link:hover p {
+    color: #ffffff;
+}
+
+.sub-menu-icon {
+    color: #9aacc9 !important;
+}
+
+.sub-menu-link:hover svg {
+    color: #ffffff !important;
+}
+
+.user-info {
+    justify-content: center;
+    align-items: center;
+    color: #9aacc9;
+}
+
+.user-info svg {
+    width: 50px;
+    margin-right: 10px;
+}
+
+#connectBTN {
+    padding: 0.2rem 0;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: #0f1633;
+}
+
+/* Hero section */
+.hero {
+    /* background: linear-gradient(rgba(255, 155, 207, 0.507), rgba(255, 155, 207, 0.438)), url(images/wallpaperflare.com_wallpaper\(1\).jpg); */
+    background: url(images/Watch\ Banner.png);
+    background-position: center;
+    background-size: cover;
+    transform: translate(0%, 4.4rem);
+}
+
+.hero button {
+    background-color: #0455BF;
+}
+
+/* Brand Partners */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#watchBanner {
+    height: 600px;
+    width: 650px;
+}
+
+.buttons-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#bannerTextCont {
+    padding-right: 2rem;
+}
+
+h4 {
+    opacity: 0.5;
+}
+
+h5 {
+    opacity: 0.8;
+}
+
+#connectBTN, #buyButton, #watchesButton {
+    border-color: #9aacc9 !important;    
+    background-color: #9aacc9 !important;
+}
+
+#buyTokenButton  {
+    border-color: #9aacc9 !important;
+    background-color: #0f1633 !important;
+    color: #9aacc9;
+}
+
+#connectBTN:hover, #watchesButton:hover, #buyTokenButton:hover {
+    background-color: #5569f0 !important;
+    color: #ffffff !important;
+    transition: 0.5s;
+}
+
+/* Supporters section */
+
+#supporters {
+    position: block;
+    border-top: 2px solid #9aacc9;
+    border-bottom: 2px solid #9aacc9;
+    top: 50px;
+}
+
+.logos {
+    overflow: hidden;
+    padding: 30px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:hover .logos-slide { 
+    animation-play-state: paused;
+}
+
+.logos:before, .logos:after {
+    position: absolute; 
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(15, 22, 51, 100));
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(15, 22, 51, 100));
+}
+
+.brand__logos {
+    opacity: 0.8;
+    position: relative;
+    margin: 0 40px;
+    height: 75px;
+    width: 150px;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 20s slide infinite linear;
+}
+
+/* Watches page */
+#watchesPageBanner {
+    margin-top: 80px;
+    max-width: 100%;
+    height: auto;
+}
+
+.aside__container {
+    background-color: #0f1633;
+}
+
+.dropdown-toggle {
+    color: #0f1633 !important;
+    background-color: #9aacc9 !important;
+}
+
+.dropdown-toggle:hover {
+    color: white !important;
+    background-color: #5569f0 !important;
+    transition: 0.5s;
+}
+
+.dropdown-menu {
+    background-color: #5569f0 !important;
+}
+
+.dropdown-item {
+    color: white !important;
+}
+
+.dropdown-item:hover {
+    background-color: #5586f0 !important;
+}
+
+.offers__container {
+    background-color: #9aacc9;
+}
+
+/* Link to Men and Women watches page */
+
+#MenAndWomenLinks {
+    background-color: #0f1633;
+    border-bottom: 2px solid #9aacc9;
+    padding: 6rem 0;
+}
+
+#MenAndWomenLinks .watches__links__cont {
+    position: relative;
+}
+
+#MenAndWomenLinks img {
+    height: 400px;
+    width: 400px;
+    border-color: #9aacc9 !important;
+}
+
+.text-over {
+    position: absolute;
+    top: 85%; /* Position the text vertically in the middle */
+    left: 50%; /* Position the text horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Text color */
+    font-size: 18px; /* Adjust font size as needed */
+    font-style: italic;
+    text-align: center; /* Center-align the text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+    padding: 10px; /* Add padding to the text */
+}
+
+/* Native token section on home page */
+
+#nativeTokenSection {
+    padding: 4rem 0;
+    background-color: #0f1633;
+    color: #9aacc9;
+}
+
+#nativeTokenSection #title {
+    display: inline-block !important;
+    width: 100% !important;
+    font-size: 40px;
+}
+
+#nativeTokenSection p {
+    clear: left;
+}
+
+#nativeTokenSection .image__cont {
+    margin: 0 5% 0 10%;
+}
+
+#nativeTokenSection .text__cont {
+    margin-right: 7%;
+}
+
+/* Most popular products */
+.card {
+    
+}
+
+/* Footer section */
+footer {
+    background: #0f1633;
+    padding: 85px 25px;
+}
+
+.single-box p {
+    color: #9aacc9 !important;
+    line-height: 1.9;
+}
+
+.single-box h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #9aacc9 !important;
+}
+
+.single-box .card-area i {
+    color: #9aacc9 !important;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.single-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.single-box ul li a {
+    text-decoration: none;
+    color: #9aacc9 !important;
+    line-height: 2.5;
+    font-weight: 100;
+}
+
+.single-box h2 {
+    color: #9aacc9 !important;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.basic-addon2 {
+    color: #9aacc9 !important;
+    color: #0f1633 !important;
+}
+
+.socials i {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+/* Login and Register pages */
+
+.text {
+    color: #9aacc9;
+}
+
+#loginPageBrandImg,
+#registerPageBrandImg {
+    position: absolute;
+    top: 1.5rem;
+}
+
+#loginBody,
+#registerBody {
+    background-image: url(images/login-page-bg-img.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background-position: center center;
+    background-size: cover;
+}
+
+#loginCont, #registerCont {
+    width: 470px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid #5569f0;
+    padding: 30px 40px;
+    border-radius: 15px;
+}
+
+#loginCont .remember-forgot,
+#loginCont .register-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+#loginCont .register-link {
+    margin-top: 0.5rem;
+}
+
+#loginCont input,
+#addWatchCont input,
+#registerCont input {
+    color: #9aacc9;
+}
+
+#loginCont .remember-forgot input {
+    accent-color: #5569f0;
+    background-color: #9aacc9;
+}
+
+#loginCont input::placeholder,
+#addWatchCont input::placeholder,
+#registerCont input::placeholder {
+    color: rgba(154, 172, 201, 0.6);
+}
+
+#loginCont a:hover,
+#registerCont a :hover {
+    text-decoration: underline !important;
+    text-decoration-color: #5569f0 !important;
+}
+
+#loginCont h1,
+#addWatchCont h1,
+#registerCont h1 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#loginCont .input-box,
+#registerCont .input-box,
+textarea {
+    position: relative;
+    height: 50px;
+    margin: 20px 0;
+}
+
+#addWatchCont #descriptionBox {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+}
+
+#registerCont .first-last-name {
+    width: 40%;
+    display: inline-block;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.input-box input,
+textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #5569f0;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#loginCont .btn,
+#registerCont .btn,
+#addWatchCont .btn {
+    width: 100%;
+    height: 45px;
+    background-color: #5569f0;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#loginCont .btn:hover {
+    background-color: #9aacc9;
+    transition: 0.5s;
+}
+/* Media properties */
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    #watchBanner {
+        height: 350px;
+        width: 350px;
+    }
+    
+    #bannerTextCont {
+       padding: 2rem 1rem 1rem 1rem;
+       border-bottom: 2px solid #9aacc9;
+    }
+    
+    .buttons-cont {
+        text-align:center;
+		justify-content: center;
+    }
+
+    #bannerTextCont h4, #bannerTextCont h1, #bannerTextCont h5 {
+        text-align: center !important;
+    }
+
+    .app-image {
+        padding: 2rem 0.8rem;
+    }
+
+    .brand__logos {
+        margin: 0 20px;
+        height: 50px;
+        width: 100px;
+    }
+
+    #MenAndWomenLinks img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .watches__links__cont {
+        padding: 2rem 0;
+    }
+
+    #MenAndWomenLinks {
+        padding: 2rem 0;
+    }
+
+    #loginCont {
+        width: 400px;
+    }
+
+    .search__bar {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .single-box {
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .single-box {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    #connectWalletBTN {
+        background-color: #9aacc9;
+        border: solid !important;
+        border-radius: 1rem;
+    }
+
+    #connectWalletBTN button {
+        font-size: large;
+    }
+
+    .nav-item {
+        margin: 1rem 5rem;
+        border: 2px;
+        border-color: #9aacc9;
+    }
+
+    .hero, #loginContainer {
+        padding: 2rem 0;
+    }
+}
