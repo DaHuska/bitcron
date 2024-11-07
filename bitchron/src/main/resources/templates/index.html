@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head th:replace="~{fragments/head}"></head>
 
@@ -87,10 +88,17 @@
               <path fill-rule="evenodd"
                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
             </svg>
-            <h3>Username</h3>
+            <h3>
+              <th:block sec:authorize="isAuthenticated()">
+                <th:block sec:authentication="name"></th:block>
+              </th:block>
+              <th:block sec:authorize="!isAuthenticated()">
+                Anonymous
+              </th:block>
+            </h3>
           </div>
           <br>
-          <a href="" class="sub-menu-link text-start">
+          <a href="" class="sub-menu-link text-start" sec:authorize="isAuthenticated()">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
               class="bi bi-person-lines-fill sub-menu-icon" viewBox="0 0 16 16">
               <path
@@ -99,7 +107,7 @@
             <p>Edit Profile</p>
             <span></span>
           </a>
-          <a href="" class="sub-menu-link text-start">
+          <a href="" class="sub-menu-link text-start" sec:authorize="isAuthenticated()">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
               class="bi bi-gear-wide-connected sub-menu-icon" viewBox="0 0 16 16">
               <path
@@ -108,7 +116,7 @@
             <p>Settings & Privacy</p>
             <span></span>
           </a>
-          <a th:href="@{/users/login}" class="sub-menu-link text-start">
+          <a th:href="@{/users/login}" class="sub-menu-link text-start" sec:authorize="!isAuthenticated()">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
               class="bi bi-box-arrow-right sub-menu-icon" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
@@ -119,7 +127,7 @@
             <p>Login</p>
             <span></span>
           </a>
-          <a th:href="@{/users/register}" class="sub-menu-link text-start">
+          <a th:href="@{/users/register}" class="sub-menu-link text-start" sec:authorize="!isAuthenticated()">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
               class="bi bi-box-arrow-right sub-menu-icon" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
@@ -130,7 +138,7 @@
             <p>Register</p>
             <span></span>
           </a>
-          <a th:href="@{/users/logout}" class="sub-menu-link text-start">
+          <a th:href="@{/users/logout}" class="sub-menu-link text-start" sec:authorize="isAuthenticated()">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
               class="bi bi-box-arrow-right sub-menu-icon" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
