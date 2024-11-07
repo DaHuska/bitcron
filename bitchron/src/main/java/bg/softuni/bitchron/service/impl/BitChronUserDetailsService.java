@@ -1,6 +1,6 @@
 package bg.softuni.bitchron.service.impl;
 
-import bg.softuni.bitchron.entity.UserEntity;
+import bg.softuni.bitchron.model.entity.UserEntity;
 import bg.softuni.bitchron.repository.UserRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

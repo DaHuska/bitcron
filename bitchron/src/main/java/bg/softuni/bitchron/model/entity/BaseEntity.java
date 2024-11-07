@@ -1,4 +1,4 @@
-package bg.softuni.bitchron.entity;
+package bg.softuni.bitchron.model.entity;
 
 import jakarta.persistence.*;
 

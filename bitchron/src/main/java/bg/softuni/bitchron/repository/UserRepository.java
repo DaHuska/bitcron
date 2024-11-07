@@ -1,7 +1,6 @@
 package bg.softuni.bitchron.repository;
 
-import bg.softuni.bitchron.entity.UserEntity;
-import org.apache.catalina.User;
+import bg.softuni.bitchron.model.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
