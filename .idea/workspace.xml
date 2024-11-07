@@ -5,44 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76555cdb-37b9-48e3-b722-6db52c4d1a50" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/web/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bitchron/src/main/resources/templates/fragments/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Hybrid watch.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/Hybrid watch.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/MenWatches.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/MenWatches.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Phone banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/Phone banner.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Watch Banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/Watch-Banner.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Watch icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/Watch icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Watch with cog.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/Watch with cog.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Watch-Banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Watch.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/Watch.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Watch_Banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Watch_icon-removebg-preview.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/Watch_icon-removebg-preview.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/Watches-Page-Banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/Watches-Page-Banner.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/WomenWatches.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/WomenWatches.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/brands logos/1024px-Binance_logo.svg.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/brands logos/1024px-Binance_logo.svg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/brands logos/Casio-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/brands logos/Casio-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/brands logos/GUESS_Watches.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/brands logos/GUESS_Watches.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/brands logos/Injective-Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/brands logos/Injective-Logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/brands logos/Jupiter-Solana-Airdrop.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/brands logos/Jupiter-Solana-Airdrop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/brands logos/crypto-com-vector-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/brands logos/crypto-com-vector-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/brands logos/jord-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/brands logos/jord-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/brands logos/pyth_logo_lockup_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/brands logos/pyth_logo_lockup_dark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/login-page-bg-img.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/login-page-bg-img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/wallpaperflare.com_wallpaper(1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/wallpaperflare.com_wallpaper(1).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/watches/maserati aqua.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/watches/maserati aqua.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/static/image/watches/sfida.png" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/static/images/watches/sfida.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/web/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/java/bg/softuni/bitchron/web/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bitchron/src/main/resources/templates/watches.html" beforeDir="false" afterPath="$PROJECT_DIR$/bitchron/src/main/resources/templates/watches.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,24 +67,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Gradle.bitchron [:bg.softuni.bitchron.BitChronApplication.main()].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/alex/BitChron/bitchron/src/main/resources/static/css",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.bitchron [:bg.softuni.bitchron.BitChronApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alex/BitChron/bitchron/src/main/resources/static/css&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bitchron/src/main/resources/static/css" />
@@ -192,7 +159,11 @@
       <workItem from="1730530840596" duration="246000" />
       <workItem from="1730531131329" duration="585000" />
       <workItem from="1730531800941" duration="2422000" />
-      <workItem from="1730534597030" duration="11059000" />
+      <workItem from="1730534597030" duration="13891000" />
+      <workItem from="1730890082437" duration="1192000" />
+      <workItem from="1730926355988" duration="2061000" />
+      <workItem from="1730960169839" duration="2924000" />
+      <workItem from="1730989031964" duration="1331000" />
     </task>
     <task id="LOCAL-00001" summary="First commmit">
       <option name="closed" value="true" />
@@ -226,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730535463195</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1730568234141</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730568234141</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
