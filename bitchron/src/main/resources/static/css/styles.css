@@ -110,6 +110,10 @@
     background-color: #1d243e;
 }
 
+.sub-menu-links {
+    padding: 0;
+}
+
 .sub-menu-link {
     display: flex;
     align-items: center;
@@ -117,10 +121,14 @@
     margin: 12px 0;
 }
 
-.sub-menu-link p {
+.sub-menu-link a, .sub-menu-link form {
     width: 100%;
     margin: 0 10px;
     color: #9aacc9;
+}
+
+.sub-menu-link svg {
+    padding-right: 5px;
 }
 
 .sub-menu-link:hover {
