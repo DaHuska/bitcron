@@ -28,15 +28,14 @@ public class UserEntity extends BaseEntity {
     @Column(name = "last_name")
     private String lastName;
 
-//    @NotNull
-//    @ManyToMany(fetch = FetchType.EAGER)
-//    @JoinTable(
-//            name = "users_user_roles",
-//            joinColumns = @JoinColumn(name = "user_id"),
-//            inverseJoinColumns = @JoinColumn(name = "role_id")
-//    )
-//    private List<UserRole> roles = new ArrayList<>();
-    // TODO: 'Many To Many' attribute value type should not be 'UserRole'
+    @NotNull
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "users_user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private List<UserRoleEntity> roles = new ArrayList<>();
 
     @NotNull
     @DateNotInTheFuture
@@ -86,6 +85,14 @@ public class UserEntity extends BaseEntity {
 
     public void setCreated(@NotNull Date created) {
         this.created = created;
+    }
+
+    public @NotNull List<UserRoleEntity> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(@NotNull List<UserRoleEntity> roles) {
+        this.roles = roles;
     }
 
     public @NotNull Date getModified() {
