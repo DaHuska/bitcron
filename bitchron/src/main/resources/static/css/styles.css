@@ -110,10 +110,6 @@
     background-color: #1d243e;
 }
 
-.sub-menu-links {
-    padding: 0;
-}
-
 .sub-menu-link {
     display: flex;
     align-items: center;
@@ -121,14 +117,10 @@
     margin: 12px 0;
 }
 
-.sub-menu-link a, .sub-menu-link form {
+.sub-menu-link p {
     width: 100%;
     margin: 0 10px;
     color: #9aacc9;
-}
-
-.sub-menu-link svg {
-    padding-right: 5px;
 }
 
 .sub-menu-link:hover {
@@ -169,7 +161,6 @@
 
 /* Hero section */
 .hero {
-    /* background: linear-gradient(rgba(255, 155, 207, 0.507), rgba(255, 155, 207, 0.438)), url(images/wallpaperflare.com_wallpaper\(1\).jpg); */
     background: url('../images/Watch-Banner.png');
     background-position: center;
     background-size: cover;
@@ -206,11 +197,11 @@
     padding-right: 2rem;
 }
 
-h4 {
+#bannerTextCont h4 {
     opacity: 0.5;
 }
 
-h5 {
+#bannerTextCont h5 {
     opacity: 0.8;
 }
 
@@ -319,6 +310,54 @@ h5 {
 
 .offers__container {
     background-color: #9aacc9;
+}
+
+/* New product page */
+.aside-wrap-menu {
+    height: auto;
+    background-color: #0f1633;
+}
+
+.aside-menu {
+    margin: 1rem 0 0 0.7rem;
+}
+
+.aside-menu .bi {
+    padding-right: 2px;
+}
+
+.aside-menu h4, .aside-menu li, .new-product-container h6, .wrapper-new-product label {
+    color: #9aacc9 !important;
+}
+
+.transaction-item, .aside-menu .menu-item, .general-item {
+    margin: 1rem 0;
+}
+
+.new-product-form {
+    height: auto;
+    background-color: #1d243e;
+    width: 100%;
+}
+
+.new-product-form .btn {
+    background-color: #9aacc9;
+    color: #0f1633 !important;
+    font-size: large;
+}
+
+.new-product-form .btn:hover {
+    background-color: #5569f0;
+    color: white !important;
+    transition: 0.5s;
+}
+
+.wrapper-new-product, .wrapper-gallery {
+    margin: 1.5rem;
+}
+
+.main-menu-link, .general-link, .transaction-link {
+    color: #9aacc9 !important;
 }
 
 /* Link to Men and Women watches page */
@@ -452,7 +491,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 110vh;
     background-position: center center;
     background-size: cover;
 }
