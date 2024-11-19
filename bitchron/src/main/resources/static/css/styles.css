@@ -117,10 +117,16 @@
     margin: 12px 0;
 }
 
-.sub-menu-link p {
+.sub-menu-link a, .sub-menu-link form {
     width: 100%;
     margin: 0 10px;
     color: #9aacc9;
+}
+
+.logout-btn {
+    background: none;
+    color: #9aacc9;
+    margin-left: 5px;
 }
 
 .sub-menu-link:hover {
@@ -128,7 +134,7 @@
     transition: 0.5s;
 }
 
-.sub-menu-link:hover p {
+.sub-menu-link:hover a, .sub-menu-link:hover .logout-btn {
     color: #ffffff;
 }
 

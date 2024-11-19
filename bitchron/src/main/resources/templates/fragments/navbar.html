@@ -104,7 +104,7 @@
                     </h3>
                 </div>
                 <br>
-                <ul class="sub-menu-links">
+                <ul class="sub-menu-links p-0">
                     <li class="sub-menu-link text-start" sec:authorize="hasRole('ADMIN')">
                         <a href="#" class="text-decoration-none">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
@@ -164,21 +164,20 @@
                             <span></span>
                         </a>
                     </li>
-                    <!--            TODO: fix logout button-->
-                    <form th:method="POST"
-                          th:action="@{/users/logout}"
-                          sec:authorize="isAuthenticated()">
-                        <input type="submit" class="sub-menu-link text-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                             class="bi bi-box-arrow-right sub-menu-icon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
-                            <path fill-rule="evenodd"
-                                  d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
-                        </svg>
-                        Logout
-                        <span></span>
-                    </form>
+                    <li class="sub-menu-link text-start text-decoration-none" sec:authorize="isAuthenticated()">
+                        <form th:method="POST"
+                              th:action="@{/users/logout}" class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                 class="bi bi-box-arrow-right sub-menu-icon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                                <path fill-rule="evenodd"
+                                      d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                            </svg>
+                            <input type="submit" class="sub-menu-link text-start logout-btn border-0 mt-0 mb-0" value="Logout">
+                            <span></span>
+                        </form>
+                    </li>
                 </ul>
                 <a th:href="@{/wallet/connect}" id="connectBTN"
                    class="sub-menu-link border border-1 rounded-2 align-items-center justify-content-center">Connect</a>

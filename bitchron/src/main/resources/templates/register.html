@@ -7,28 +7,29 @@
 
 <body id="loginBody">
     <div id="loginPageBrandImg">
-        <a href="index.html" class="navbar-brand text active fs-3 fw-bold" href="#">
-            <img src="images/icons8-watch-96.png" alt="" width="64" height="64"
-                class="d-inline-block align-text-center" />
+        <a th:href="@{/home}" class="navbar-brand text active fs-3 fw-bold">
+<!--            <img src="images/icons8-watch-96.png" alt="" width="64" height="64"-->
+<!--                class="d-inline-block align-text-center" />-->
             BitChron
         </a>
     </div>
     <!-- Login/Register Form -->
     <div class="wrapper" id="registerCont">
-        <form action="">
+        <form th:action="@{/users/register}"
+                th:method="POST">
             <h1 class="text">Register</h1>
             <div class="d-flex justify-content-between">
                 <div class="input-box first-last-name">
                     <input type="text" placeholder="First Name" required>
-                    <p class="alert alert-danger mt-2 py-2 rounded-5">
-                        Bad credentials!
-                      </p>
+<!--                    <p class="alert alert-danger mt-2 py-2 rounded-5">-->
+<!--                        Bad credentials!-->
+<!--                      </p>-->
                 </div>
                 <div class="input-box first-last-name">
                     <input type="text" placeholder="Last Name" required>
-                    <p class="alert alert-danger mt-2 z-1 py-2 rounded-5 ">
-                        Bad credentials!
-                      </p>
+<!--                    <p class="alert alert-danger mt-2 z-1 py-2 rounded-5 ">-->
+<!--                        Bad credentials!-->
+<!--                      </p>-->
                 </div>
             </div>
             <div class="input-box">
@@ -39,9 +40,9 @@
                     <path fill-rule="evenodd"
                         d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                 </svg>
-                <p class="alert alert-danger mt-2 py-2 rounded-5 position-">
-                    Bad credentials!
-                  </p>
+<!--                <p class="alert alert-danger mt-2 py-2 rounded-5 position-">-->
+<!--                    Bad credentials!-->
+<!--                  </p>-->
             </div>
             <div class="input-box">
                 <input type="password" placeholder="Password" required>
