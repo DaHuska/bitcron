@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
@@ -24,6 +25,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/", "/users/login", "/users/register", "/users/logout", "/users/login-error").permitAll()
                         // All other requests are authenticated
                         .anyRequest().authenticated()
+
         ).formLogin(
                 formLogin -> {
                     // Redirect here when we access something which is not allowed
@@ -55,4 +57,7 @@ public class SecurityConfiguration {
     public PasswordEncoder passwordEncoder() {
         return Pbkdf2PasswordEncoder.defaultsForSpringSecurity_v5_8();
     }
+
+    @Bean
+    public ModelMapper
 }

@@ -51,55 +51,69 @@ public class UserEntity extends BaseEntity {
         return username;
     }
 
-    public void setUsername(String username) {
+    public UserEntity setUsername(String username) {
         this.username = username;
+
+        return this;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public UserEntity setPassword(String password) {
         this.password = password;
+
+        return this;
     }
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public UserEntity setFirstName(String firstName) {
         this.firstName = firstName;
+
+        return this;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public UserEntity setLastName(String lastName) {
         this.lastName = lastName;
+
+        return this;
     }
 
-    public @NotNull Date getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(@NotNull Date created) {
+    public UserEntity setCreated(Date created) {
         this.created = created;
+
+        return this;
     }
 
-    public @NotNull List<UserRoleEntity> getRoles() {
+    public List<UserRoleEntity> getRoles() {
         return roles;
     }
 
-    public void setRoles(@NotNull List<UserRoleEntity> roles) {
+    public UserEntity setRoles(List<UserRoleEntity> roles) {
         this.roles = roles;
+
+        return this;
     }
 
-    public @NotNull Date getModified() {
+    public Date getModified() {
         return modified;
     }
 
-    public void setModified(@NotNull Date modified) {
+    public UserEntity setModified(Date modified) {
         this.modified = modified;
+
+        return this;
     }
 }
