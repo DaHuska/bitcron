@@ -117,16 +117,10 @@
     margin: 12px 0;
 }
 
-.sub-menu-link a, .sub-menu-link form {
+.sub-menu-link p {
     width: 100%;
     margin: 0 10px;
     color: #9aacc9;
-}
-
-.logout-btn {
-    background: none;
-    color: #9aacc9;
-    margin-left: 5px;
 }
 
 .sub-menu-link:hover {
@@ -134,7 +128,7 @@
     transition: 0.5s;
 }
 
-.sub-menu-link:hover a, .sub-menu-link:hover .logout-btn {
+.sub-menu-link:hover p {
     color: #ffffff;
 }
 
@@ -167,6 +161,7 @@
 
 /* Hero section */
 .hero {
+    /* background: linear-gradient(rgba(255, 155, 207, 0.507), rgba(255, 155, 207, 0.438)), url(images/wallpaperflare.com_wallpaper\(1\).jpg); */
     background: url('../images/Watch-Banner.png');
     background-position: center;
     background-size: cover;
@@ -222,7 +217,7 @@
     color: #9aacc9;
 }
 
-#connectBTN:hover, #watchesButton:hover, #buyTokenButton:hover {
+#connectBTN:hover, #watchesButton:hover, #buyTokenButton:hover, #buyButton:hover {
     background-color: #5569f0 !important;
     color: #ffffff !important;
     transition: 0.5s;
@@ -277,7 +272,7 @@
 
 .logos-slide {
     display: inline-block;
-    animation: 20s slide infinite linear;
+    animation: 50s slide infinite linear;
 }
 
 /* Watches page */

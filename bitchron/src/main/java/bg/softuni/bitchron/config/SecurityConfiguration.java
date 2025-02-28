@@ -2,6 +2,7 @@ package bg.softuni.bitchron.config;
 
 import bg.softuni.bitchron.repository.UserRepository;
 import bg.softuni.bitchron.service.impl.BitChronUserDetailsService;
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,6 +24,8 @@ public class SecurityConfiguration {
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                         // Allow anyone to see
                         .requestMatchers("/", "/users/login", "/users/register", "/users/logout", "/users/login-error").permitAll()
+                        .requestMatchers("/home").permitAll()
+                        .requestMatchers("/watches").permitAll()
                         // All other requests are authenticated
                         .anyRequest().authenticated()
 
@@ -59,5 +62,7 @@ public class SecurityConfiguration {
     }
 
     @Bean
-    public ModelMapper
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
 }
