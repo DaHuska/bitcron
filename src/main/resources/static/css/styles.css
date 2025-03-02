@@ -100,7 +100,7 @@
 }
 
 .sub-menu-wrap.open-menu {
-    max-height: 400px;
+    max-height: 500px;
 }
 
 .sub-menu {
@@ -115,6 +115,10 @@
     align-items: center;
     text-decoration: none;
     margin: 12px 0;
+}
+
+.sub-menu-link a {
+    color: #9aacc9;
 }
 
 .sub-menu-link p {
