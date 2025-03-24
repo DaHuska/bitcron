@@ -38,7 +38,7 @@
     transition: 0.5s;
 }
 
-.navbar-brand, .nav-link, .banner__buttons, h1, #banner-text,h4 {
+.navbar-brand, .nav-link, .banner__buttons, .banner-text {
     color: #9aacc9 !important;
 }
 
