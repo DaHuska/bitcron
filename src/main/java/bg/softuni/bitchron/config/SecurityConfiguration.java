@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
@@ -23,9 +22,11 @@ public class SecurityConfiguration {
                         // All static resources which are situated in js, images, css are available for anyone
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                         // Allow anyone to see
-                        .requestMatchers("/", "/users/login", "/users/register", "/users/logout", "/users/login-error").permitAll()
+                        .requestMatchers("/", "/users/login", "/users/register", "/users/logout").permitAll()
                         .requestMatchers("/home").permitAll()
                         .requestMatchers("/watches").permitAll()
+                        // status code 999 error
+                        .requestMatchers("/error").permitAll()
                         // All other requests are authenticated
                         .anyRequest().authenticated()
 
