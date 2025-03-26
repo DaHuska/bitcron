@@ -140,6 +140,11 @@
     color: #ffffff !important;
 }
 
+.sub-menu-link:hover {
+    border-left: 1.5px solid #ffffff;
+    transition: 0.1s;
+}
+
 .user-info {
     justify-content: center;
     align-items: center;
@@ -169,8 +174,6 @@
     background: url('../images/Watch-Banner.png');
     background-position: center;
     background-size: cover;
-    transform: translate(0%, 4.4rem);
-    max-height: 50%;
 }
 
 .hero button {
@@ -234,7 +237,6 @@
     position: block;
     border-top: 2px solid #9aacc9;
     border-bottom: 2px solid #9aacc9;
-    top: 50px;
 }
 
 .logos {
