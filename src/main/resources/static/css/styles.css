@@ -16,6 +16,7 @@
     top: 0;
     right: 0;
     width: 100%;
+    height: 10vh;
     z-index: 999;
 }
 
@@ -174,6 +175,7 @@
     background: url('../images/Watch-Banner.png');
     background-position: center;
     background-size: cover;
+    height: 75vh;
 }
 
 .hero button {
@@ -241,7 +243,7 @@
 
 .logos {
     overflow: hidden;
-    padding: 30px 0;
+    height: 14vh;
     white-space: nowrap;
     position: relative;
 }
@@ -283,12 +285,6 @@
 }
 
 /* Watches page */
-#watchesPageBanner {
-    margin-top: 80px;
-    max-width: 100%;
-    height: auto;
-}
-
 .aside__container {
     background-color: #0f1633;
 }
@@ -618,61 +614,21 @@ textarea {
     background-color: #9aacc9;
     transition: 0.5s;
 }
+
 /* Media properties */
 
 @media (max-width: 576px) {
-    .navbar-nav {
-        margin-top: 1rem;
-    }
-
+    /* TODO: what to do with banner design mobile mode */
     #watchBanner {
-        height: 350px;
-        width: 350px;
+        display: none;
     }
 
-    #bannerTextCont {
-        padding: 2rem 1rem 1rem 1rem;
-        border-bottom: 2px solid #9aacc9;
+    .navbar {
+        height: 15vh;
     }
 
-    .buttons-cont {
-        text-align:center;
-        justify-content: center;
-    }
-
-    #bannerTextCont h4, #bannerTextCont h1, #bannerTextCont h5 {
-        text-align: center !important;
-    }
-
-    .app-image {
-        padding: 2rem 0.8rem;
-    }
-
-    .brand__logos {
-        margin: 0 20px;
-        height: 50px;
-        width: 100px;
-    }
-
-    #MenAndWomenLinks img {
-        height: 300px;
-        width: 300px;
-    }
-
-    .watches__links__cont {
-        padding: 2rem 0;
-    }
-
-    #MenAndWomenLinks {
-        padding: 2rem 0;
-    }
-
-    #loginCont {
-        width: 400px;
-    }
-
-    .search__bar {
-        margin: 0 20px;
+    .hero {
+        height: 70vh;
     }
 }
 
