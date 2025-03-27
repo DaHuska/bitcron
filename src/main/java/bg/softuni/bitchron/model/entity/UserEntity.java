@@ -2,10 +2,8 @@ package bg.softuni.bitchron.model.entity;
 
 import bg.softuni.bitchron.model.validation.DateNotInTheFuture;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-
-import bg.softuni.bitchron.model.enums.UserRole;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,19 +12,21 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 public class UserEntity extends BaseEntity {
-    @NotEmpty
+    @NotBlank
+    @Column(name = "first_name")
+    private String firstName;
+
+    @NotBlank
+    @Column(name = "last_name")
+    private String lastName;
+
+    @NotBlank
     @Column
     private String username;
 
-    @NotEmpty
+    @NotBlank
     @Column
     private String password;
-
-    @Column(name = "first_name")
-    private String firstName;
-    
-    @Column(name = "last_name")
-    private String lastName;
 
     @NotNull
     @ManyToMany(fetch = FetchType.EAGER)
@@ -37,15 +37,15 @@ public class UserEntity extends BaseEntity {
     )
     private List<UserRoleEntity> roles = new ArrayList<>();
 
-    @NotNull
     @DateNotInTheFuture
+    @NotNull
     @Column
-    private Date created;
+    private Date created = new Date();
 
-    @NotNull
     @DateNotInTheFuture
+    @NotNull
     @Column
-    private Date modified;
+    private Date modified = new Date();
 
     public String getUsername() {
         return username;
@@ -101,8 +101,8 @@ public class UserEntity extends BaseEntity {
         return roles;
     }
 
-    public UserEntity setRoles(List<UserRoleEntity> roles) {
-        this.roles = roles;
+    public UserEntity setRoles(UserRoleEntity role) {
+        this.roles.add(role);
 
         return this;
     }

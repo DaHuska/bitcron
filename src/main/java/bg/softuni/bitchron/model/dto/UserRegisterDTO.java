@@ -1,20 +1,18 @@
 package bg.softuni.bitchron.model.dto;
 
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotBlank;
 
 public class UserRegisterDTO {
-    @NotEmpty
+    @NotBlank
     private String firstName;
 
-    @NotEmpty
+    @NotBlank
     private String lastName;
 
-    @NotEmpty
+    @NotBlank
     private String username;
 
-    @NotEmpty
-
-    @NotEmpty
+    @NotBlank
     private String password;
 
     public String getFirstName() {
