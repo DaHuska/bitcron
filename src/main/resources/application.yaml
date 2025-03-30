@@ -20,5 +20,5 @@ logging:
         org.hibernate.orm.jdbc.bind: TRACE
         org.springframework.security: TRACE
 
-#mobilele:
-#    remember.me.key: ${REMEMBER_ME_KEY}
+bitcron:
+    remember.me.key: ${REMEMBER_ME_KEY}
