@@ -3,16 +3,16 @@ package bg.softuni.bitchron.service.impl;
 import bg.softuni.bitchron.model.dto.UserRegisterDTO;
 import bg.softuni.bitchron.model.entity.UserEntity;
 import bg.softuni.bitchron.model.entity.UserRoleEntity;
-import bg.softuni.bitchron.model.enums.UserRole;
 import bg.softuni.bitchron.repository.RoleRepository;
 import bg.softuni.bitchron.repository.UserRepository;
 import bg.softuni.bitchron.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
@@ -36,14 +36,22 @@ public class UserServiceImpl implements UserService {
             return;
         }
 
-//        UserEntity newUser = map(user);
+        user.setPassword(encodePassword(user.getPassword()));
+        UserEntity newUser = map(user);
+
+        userRepository.save(newUser);
     }
 
-//    private static UserEntity map(UserRegisterDTO userRegisterDTO) {
-//        return new UserEntity()
-//                .setFirstName(userRegisterDTO.getFirstName())
-//                .setLastName(userRegisterDTO.getLastName())
-//                .setUsername(userRegisterDTO.getUsername())
-//                .setRoles(List.of(UserRole.USER));
-//    }
+    private static UserEntity map(UserRegisterDTO userRegisterDTO) {
+        return new UserEntity()
+                .setFirstName(userRegisterDTO.getFirstName())
+                .setLastName(userRegisterDTO.getLastName())
+                .setUsername(userRegisterDTO.getUsername())
+                .setPassword(userRegisterDTO.getPassword());
+//                .setRoles();
+    }
+
+    private String encodePassword(String password) {
+        return passwordEncoder.encode(password);
+    }
 }
