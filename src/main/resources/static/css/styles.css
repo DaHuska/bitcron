@@ -313,7 +313,8 @@
 }
 
 .offers__container {
-    background-color: #9aacc9;
+    /* background: url(images/background_watches_page.png); */
+    background-color: #0f1633;
 }
 
 .recommendation-wrap {
@@ -423,7 +424,18 @@
 
 /* Most popular products */
 .card-body {
-    background-color: #9aacc9;
+    /* background-color: #f7f9fc; */
+    background-color: #e7ebf1;
+}
+
+.card-body .btn {
+    background-color: #ef476f !important;
+    border-color: #ef476f;
+    color: #0f1633;
+}
+
+.card-body .btn {
+
 }
 
 /* Footer section */
@@ -612,18 +624,25 @@ textarea {
 
 /* Media properties */
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
     /* TODO: what to do with banner design mobile mode */
     #watchBanner {
         display: none;
     }
 
     .navbar {
-        height: 15vh;
+        height: 10vh;
+    }
+
+    .navbar-nav {
+        background-color: #1d243e;
+        padding-bottom: 0.7rem;
+        border: solid #9aacc9 2px;
+        border-radius: 1rem;
     }
 
     .hero {
-        height: 70vh;
+        height: 75vh;
     }
 
     #MenAndWomenLinks {
@@ -634,15 +653,7 @@ textarea {
         height: 300px;
         width: 300px;
     }
-}
 
-@media (max-width: 767px) {
-    .single-box {
-        margin-bottom: 50px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
     .single-box {
         margin-bottom: 50px;
     }
