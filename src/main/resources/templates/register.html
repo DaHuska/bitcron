@@ -15,25 +15,24 @@
     </div>
     <!-- Login/Register Form -->
     <div class="wrapper" id="registerCont">
-        <form th:action="@{/users/register}"
-                th:method="POST">
+        <form th:method="POST"
+                th:action="@{/users/register}"
+                th:object="${userRegisterDTO}">
             <h1 class="text">Register</h1>
             <div class="d-flex justify-content-between">
                 <div class="input-box first-last-name">
                     <input type="text"
+                           th:field="*{firstName}"
                            placeholder="First Name"
-                           id="firstName"
-                           name="firstName"
                            required>
-<!--                    <p class="alert alert-danger mt-2 py-2 rounded-5">-->
-<!--                        Bad credentials!-->
-<!--                      </p>-->
+                    <p class="alert alert-danger mt-2 py-2 rounded-5">
+                        Bad credentials!
+                    </p>
                 </div>
                 <div class="input-box first-last-name">
                     <input type="text"
+                           th:field="*{lastName}"
                            placeholder="Last Name"
-                           id="lastName"
-                           name="lastName"
                            required>
 <!--                    <p class="alert alert-danger mt-2 z-1 py-2 rounded-5 ">-->
 <!--                        Bad credentials!-->
@@ -42,9 +41,8 @@
             </div>
             <div class="input-box">
                 <input type="text"
+                       th:field="*{username}"
                        placeholder="Username"
-                       id="username"
-                       name="username"
                        required>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-person-circle text" viewBox="0 0 16 16">
@@ -58,9 +56,8 @@
             </div>
             <div class="input-box">
                 <input type="password"
+                       th:field="*{password}"
                        placeholder="Password"
-                       id="password"
-                       name="password"
                        required>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-shield-lock text" viewBox="0 0 16 16">
@@ -71,6 +68,7 @@
                 </svg>
             </div>
             <div class="input-box">
+<!--                TODO: Implement password confirmation-->
                 <input type="password"
                        placeholder="Confirm Password">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
