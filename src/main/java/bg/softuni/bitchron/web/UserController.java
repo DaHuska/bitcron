@@ -24,21 +24,21 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public ModelAndView login(ModelAndView modelAndView) {
-        modelAndView.setViewName("login");
-
-        return modelAndView;
+    public String login() {
+        return "login";
     }
 
     @GetMapping("/register")
-    public String register() {
-//        modelAndView.setViewName("register");
+    public String register(Model model) {
+        if (!model.containsAttribute("userRegisterDTO")) {
+            model.addAttribute("userRegisterDTO", new UserRegisterDTO());
+        }
 
         return "register";
     }
 
     @PostMapping("/register")
-    public String register(@Valid  UserRegisterDTO userRegisterDTO,
+    public String register(@Valid UserRegisterDTO userRegisterDTO,
                            BindingResult bindingResult,
                            RedirectAttributes redirectAttributes) {
 
@@ -47,6 +47,8 @@ public class UserController {
                     .addFlashAttribute("userRegisterDTO", userRegisterDTO);
             redirectAttributes
                     .addFlashAttribute("org.springframework.validation.BindingResult.userRegisterDTO", bindingResult);
+
+            return "redirect:/users/register";
         }
 
         userService.register(userRegisterDTO);
