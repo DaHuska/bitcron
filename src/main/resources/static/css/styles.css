@@ -43,12 +43,6 @@
     color: #9aacc9 !important;
 }
 
-.search__bar {
-    width: 100%;
-    margin: 0 20%;
-    clear: both;
-}
-
 .bi-stopwatch {
     position: absolute;
     top: 50%;
@@ -167,6 +161,48 @@
     margin-left: 2rem;
     margin-right: 2rem;
     color: #0f1633;
+}
+
+.search__bar__navigation {
+    background-color: #0f1633;
+}
+
+.search__bar__navigation input {
+    background-color: #0f1633 !important;
+}
+
+.search__bar__navigation svg {
+    fill: #0f1633 !important;
+}
+
+.search__bar__navigation input::placeholder {
+    color: #9aacc9 !important;
+    opacity: 0.7;
+}
+
+.search__bar__navigation form {
+    border-color: #9aacc9 !important;
+}
+
+.search__bar__navigation button {
+    background-color: #9aacc9 !important;
+}
+
+.search__bar__navigation button:hover {
+    background-color: #5569f0 !important;
+    border-color: white !important;
+    transition: 0.3s;
+}
+
+.search__bar__navigation button:hover svg {
+    fill: white !important;
+    transition: 0.3s;
+}
+
+.search__bar {
+    width: 100%;
+    margin: 0 20%;
+    clear: both;
 }
 
 /* Hero section */
@@ -565,7 +601,6 @@ footer {
 #loginCont .input-box,
 #registerCont .input-box,
 textarea {
-    position: relative;
     height: 50px;
     margin: 20px 0;
 }
@@ -577,7 +612,7 @@ textarea {
 }
 
 #registerCont .first-last-name {
-    width: 40%;
+    width: 49%;
     display: inline-block;
     margin: 0;
     margin-top: 30px;
