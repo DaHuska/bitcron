@@ -163,8 +163,13 @@
     color: #0f1633;
 }
 
+/* Search bar */
 .search__bar__navigation {
     background-color: #0f1633;
+    top: 10vh;
+    width: 100%;
+    height: 8vh;
+    z-index: 999;
 }
 
 .search__bar__navigation input {
@@ -211,7 +216,7 @@
     background: url('../images/Watch-Banner.png');
     background-position: center;
     background-size: cover;
-    height: 75vh;
+    height: 70vh;
 }
 
 .hero button {
@@ -279,7 +284,7 @@
 
 .logos {
     overflow: hidden;
-    height: 14vh;
+    height: 11vh;
     white-space: nowrap;
     position: relative;
 }
@@ -321,8 +326,14 @@
 }
 
 /* Watches page */
+.offers__container {
+    padding: 2rem 8vw;
+    background-color: #0f1633;
+}
+
 .aside__container {
     background-color: #0f1633;
+    padding-top: 5rem;
 }
 
 .dropdown-toggle {
@@ -346,11 +357,6 @@
 
 .dropdown-item:hover {
     background-color: #5586f0 !important;
-}
-
-.offers__container {
-    /* background: url(images/background_watches_page.png); */
-    background-color: #0f1633;
 }
 
 .recommendation-wrap {
@@ -658,7 +664,6 @@ textarea {
 }
 
 /* Media properties */
-
 @media (max-width: 991px) {
     /* TODO: what to do with banner design mobile mode */
     #watchBanner {
@@ -692,9 +697,7 @@ textarea {
     .single-box {
         margin-bottom: 50px;
     }
-}
 
-@media (max-width: 991px) {
     #connectWalletBTN {
         background-color: #9aacc9;
         border: solid !important;
@@ -713,5 +716,11 @@ textarea {
 
     .hero, #loginContainer {
         padding: 2rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .offers__container {
+        padding: 3rem 20vw;
     }
 }
