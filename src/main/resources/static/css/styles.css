@@ -739,7 +739,7 @@ textarea {
     }
 
     .navbar-nav {
-        background-color: #1d243e;
+        background-color: var(--main-color);
         padding-bottom: 0.7rem;
         border: solid var(--secondary-color) 2px;
         border-radius: 1rem;
