@@ -33,6 +33,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/", "/users/login", "/users/register", "/users/logout").permitAll()
                         .requestMatchers("/home").permitAll()
                         .requestMatchers("/watches").permitAll()
+                        .requestMatchers("/add-watch").permitAll()
                         // status code 999 error
                         .requestMatchers("/error").permitAll()
                         // All other requests are authenticated

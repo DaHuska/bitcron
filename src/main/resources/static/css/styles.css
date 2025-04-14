@@ -217,7 +217,7 @@
 /* Hero section */
 .hero {
     /* background: linear-gradient(rgba(255, 155, 207, 0.507), rgba(255, 155, 207, 0.438)), url(images/wallpaperflare.com_wallpaper\(1\).jpg); */
-    background: url('../images/home_page_banner.png');
+    background: url('../images/Watch-Banner.png');
     background-position: center;
     background-size: cover;
     height: 70vh;
@@ -369,31 +369,48 @@
 }
 
 /* New product page */
-.aside-wrap-menu {
-    height: auto;
+.aside_menu_button {
+    background-color: var(--main-color);
+    border: solid 2px var(--secondary-color);
+    border-radius: 1rem;
+}
+
+.new-product-section {
+    padding-top: 1rem;
     background-color: var(--main-color);
 }
 
-.aside-menu {
+.new-product-section .aside-wrap-menu, .new-product-container {
+    width: 20vw;
+}
+
+.new-product-section .aside-menu {
     margin: 1rem 0 0 0.7rem;
 }
 
-.aside-menu .bi {
+.new-product-section .aside-menu .bi {
     padding-right: 2px;
 }
 
-.aside-menu h4, .aside-menu li, .new-product-container h6, .wrapper-new-product label {
+.new-product-section .aside-wrap-menu h4,
+.new-product-section .aside-wrap-menu li,
+.new-product-section .new-product-container h6,
+.new-product-section .wrapper-new-product label {
     color: var(--secondary-color) !important;
 }
 
-.transaction-item, .aside-menu .menu-item, .general-item {
+.transaction-item, .aside-wrap-menu .menu-item, .general-item {
     margin: 1rem 0;
 }
 
-.new-product-form {
-    height: auto;
-    background-color: #1d243e;
-    width: 100%;
+.new-product-container {
+    padding-top: 1rem;
+    width: 80vw;
+}
+
+.new-product-container h4 {
+    color: #9aacc9 !important;
+    opacity: 0.6;
 }
 
 .new-product-form .btn {
@@ -409,15 +426,58 @@
 }
 
 .wrapper-new-product, .wrapper-gallery {
-    margin: 1.5rem;
+    width: 40vw;
+}
+
+.wrapper-gallery {
+    padding-top: 2rem;
+}
+
+.wrapper-gallery #productImage {
+    width: 30vw;
 }
 
 .main-menu-link, .general-link, .transaction-link {
     color: var(--secondary-color) !important;
 }
 
-/* Link to Men and Women watches page */
+@media (max-width: 991px) {
+    .new-product-section {
+        display: flex;
+        justify-content: center;
+    }
 
+    .new-product-section h4 {
+        text-align: center;
+    }
+
+    .new-product-container, .new-product-form {
+        width: 90vw;
+    }
+
+    .wrapper-new-product, .wrapper-gallery {
+        width: 90vw;
+    }
+
+    .aside-wrap-menu {
+        width: 250px !important;
+        z-index: 800;
+        background-color: var(--main-color);
+        border: solid 2px var(--secondary-color);
+        border-radius: 0.5rem;
+    }
+
+    .mobile-menu {
+        left: 0;
+    }
+
+    .mobile-menu.close {
+        transform: translate(-82%);
+        transition: 1s;
+    }
+}
+
+/* Link to Men and Women watches page */
 #MenAndWomenLinks {
     background-color: var(--main-color);
     border-bottom: 2px solid var(--secondary-color);
