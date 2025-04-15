@@ -217,7 +217,7 @@
 /* Hero section */
 .hero {
     /* background: linear-gradient(rgba(255, 155, 207, 0.507), rgba(255, 155, 207, 0.438)), url(images/wallpaperflare.com_wallpaper\(1\).jpg); */
-    background: url('../images/Watch-Banner.png');
+    background: url('../images/home_page_banner.png');
     background-position: center;
     background-size: cover;
     height: 70vh;
@@ -378,6 +378,11 @@
 .new-product-section {
     padding-top: 1rem;
     background-color: var(--main-color);
+}
+
+#sidebarDesktop {
+    top: 13%;
+    height: 450px;
 }
 
 .new-product-section .aside-wrap-menu, .new-product-container {

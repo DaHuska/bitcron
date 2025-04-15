@@ -19,6 +19,5 @@ logging:
         org.hibernate.SQL: DEBUG
         org.hibernate.orm.jdbc.bind: TRACE
         org.springframework.security: TRACE
-
 bitcron:
     remember.me.key: ${REMEMBER_ME_KEY}

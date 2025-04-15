@@ -15,6 +15,9 @@ public class UserRegisterDTO {
     @NotBlank
     private String password;
 
+    @NotBlank
+    private String confirmPassword;
+
     public String getFirstName() {
         return firstName;
     }
@@ -45,5 +48,13 @@ public class UserRegisterDTO {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
 }
