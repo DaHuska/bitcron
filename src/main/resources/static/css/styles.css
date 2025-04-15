@@ -335,6 +335,15 @@
     background-color: var(--main-color);
 }
 
+.watches-container .banner {
+    height: 60vh;
+}
+
+.watches-container .banner img {
+    width: 100%;
+    height: 75vh;
+}
+
 .aside__container {
     background-color: var(--main-color);
     padding-top: 5rem;
