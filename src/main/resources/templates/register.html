@@ -7,7 +7,7 @@
 
 <body id="loginBody">
     <div id="loginPageBrandImg">
-        <a th:href="@{/home}" class="navbar-brand text active fs-3 fw-bold">
+        <a th:href="@{/}" class="navbar-brand text active fs-3 fw-bold">
 <!--            <img src="images/icons8-watch-96.png" alt="" width="64" height="64"-->
 <!--                class="d-inline-block align-text-center" />-->
             BitChron
@@ -19,46 +19,49 @@
                 th:action="@{/users/register}"
                 th:object="${userRegisterDTO}">
             <h1 class="text">Register</h1>
-            <div class="d-flex justify-content-between">
-                <div class="input-box first-last-name">
+            <div class="d-flex justify-content-between position-relative">
+                <div class="input-box first-last-name position-relative">
                     <input type="text"
                            th:field="*{firstName}"
-                           placeholder="First Name"
-                           required>
-                    <p class="alert alert-danger mt-2 py-2 rounded-5">
-                        Bad credentials!
+                           placeholder="First Name">
+                    <p class="alert alert-danger mt-1 py-1 rounded-5"
+                       th:if="${#fields.hasErrors('firstName')}">
+                        Invalid First Name!
                     </p>
                 </div>
-                <div class="input-box first-last-name">
+                <div class="input-box first-last-name position-relative">
                     <input type="text"
                            th:field="*{lastName}"
-                           placeholder="Last Name"
-                           required>
-<!--                    <p class="alert alert-danger mt-2 z-1 py-2 rounded-5 ">-->
-<!--                        Bad credentials!-->
-<!--                      </p>-->
+                           placeholder="Last Name">
+                    <p class="alert alert-danger mt-1 z-1 py-1 rounded-5"
+                        th:if="${#fields.hasErrors('lastName')}">
+                       Invalid Last Name!
+                    </p>
                 </div>
             </div>
-            <div class="input-box">
+            <div class="position-relative m-5"
+                th:if="${#fields.hasErrors('firstName') or #fields.hasErrors('lastName')}"></div>
+            <div class="input-box position-relative">
                 <input type="text"
                        th:field="*{username}"
-                       placeholder="Username"
-                       required>
+                       placeholder="Username">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-person-circle text" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                     <path fill-rule="evenodd"
                         d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                 </svg>
-<!--                <p class="alert alert-danger mt-2 py-2 rounded-5 position-">-->
-<!--                    Bad credentials!-->
-<!--                  </p>-->
+                <p class="alert alert-danger mt-1 py-1 rounded-5 position-relative"
+                    th:if="${#fields.hasErrors('username')}">
+                    Invalid Username or already exists!
+                </p>
             </div>
-            <div class="input-box">
+            <div class="position-relative m-5"
+                 th:if="${#fields.hasErrors('username')}"></div>
+            <div class="input-box position-relative">
                 <input type="password"
                        th:field="*{password}"
-                       placeholder="Password"
-                       required>
+                       placeholder="Password">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-shield-lock text" viewBox="0 0 16 16">
                     <path
@@ -66,10 +69,17 @@
                     <path
                         d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z" />
                 </svg>
+                <p class="alert alert-danger mt-1 py-1 rounded-5 position-relative"
+                    th:if="${#fields.hasErrors('password')}">
+                    Invalid Password!
+                </p>
             </div>
-            <div class="input-box">
+            <div class="position-relative m-5"
+                 th:if="${#fields.hasErrors('password')}"></div>
+            <div class="input-box position-relative">
 <!--                TODO: Implement password confirmation-->
                 <input type="password"
+                       th:field="*{confirmPassword}"
                        placeholder="Confirm Password">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-shield-lock text" viewBox="0 0 16 16">
@@ -78,7 +88,13 @@
                     <path
                         d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z" />
                 </svg>
+                <p class="alert alert-danger mt-1 py-1 rounded-5 position-relative"
+                   th:if="${#fields.hasErrors('confirmPassword')}">
+                    Passwords do not match!
+                </p>
             </div>
+            <div class="position-relative m-5"
+                 th:if="${#fields.hasErrors('confirmPassword')}"></div>
             <button type="submit" class="btn my-4">Register</button>
         </form>
     </div>
