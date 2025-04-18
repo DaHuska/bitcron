@@ -53,4 +53,76 @@ public class WatchEntity extends BaseEntity {
     @NotEmpty
     @DateNotInTheFuture
     private Date created;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public MovementType getMechanism() {
+        return mechanism;
+    }
+
+    public void setMechanism(MovementType mechanism) {
+        this.mechanism = mechanism;
+    }
+
+    public CrystalType getCrystal() {
+        return crystal;
+    }
+
+    public void setCrystal(CrystalType crystal) {
+        this.crystal = crystal;
+    }
+
+    public StrapType getStrap() {
+        return strap;
+    }
+
+    public void setStrap(StrapType strap) {
+        this.strap = strap;
+    }
+
+    public Double getChassisSize() {
+        return chassisSize;
+    }
+
+    public void setChassisSize(Double chassisSize) {
+        this.chassisSize = chassisSize;
+    }
+
+    public WaterResistanceType getWaterResistance() {
+        return waterResistance;
+    }
+
+    public void setWaterResistance(WaterResistanceType waterResistance) {
+        this.waterResistance = waterResistance;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
 }
