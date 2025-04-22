@@ -29,7 +29,7 @@ public class WatchEntity extends BaseEntity {
     @Column
     @NotEmpty
     @Enumerated(EnumType.STRING)
-    private MovementType mechanism;
+    private MovementType movement;
 
     @Column
     @NotEmpty
@@ -90,12 +90,12 @@ public class WatchEntity extends BaseEntity {
         this.model = model;
     }
 
-    public MovementType getMechanism() {
-        return mechanism;
+    public MovementType getMovement() {
+        return movement;
     }
 
-    public void setMechanism(MovementType mechanism) {
-        this.mechanism = mechanism;
+    public void setMovement(MovementType movement) {
+        this.movement = movement;
     }
 
     public CrystalType getCrystal() {
