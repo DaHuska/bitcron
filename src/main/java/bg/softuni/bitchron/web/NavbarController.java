@@ -9,9 +9,4 @@ public class NavbarController {
     public String home() {
         return "index";
     }
-
-    @GetMapping("/watches")
-    public String watches() {
-        return "watches";
-    }
 }
