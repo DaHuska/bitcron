@@ -12,6 +12,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
 @Configuration
 public class SecurityConfiguration {
@@ -32,8 +34,7 @@ public class SecurityConfiguration {
                         // Allow anyone to see
                         .requestMatchers("/", "/users/login", "/users/register", "/users/logout").permitAll()
                         .requestMatchers("/home").permitAll()
-                        .requestMatchers("/watches").permitAll()
-                        .requestMatchers("/add-watch").permitAll()
+                        .requestMatchers("/products/add-watch", "/products/watches").permitAll()
                         // status code 999 error
                         .requestMatchers("/error").permitAll()
                         // All other requests are authenticated
@@ -81,5 +82,12 @@ public class SecurityConfiguration {
     @Bean
     public ModelMapper modelMapper() {
         return new ModelMapper();
+    }
+
+    @Bean
+    public MultipartResolver multipartResolver() {
+        StandardServletMultipartResolver multipartResolver = new StandardServletMultipartResolver();
+
+        return multipartResolver;
     }
 }
