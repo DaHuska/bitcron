@@ -54,6 +54,18 @@ public class WatchEntity extends BaseEntity {
     @DateNotInTheFuture
     private Date created;
 
+    @Column(name = "image_name")
+    @NotEmpty
+    private String imageName;
+
+    @Column(name = "image_type")
+    @NotEmpty
+    private String imageType;
+
+    @Column(name = "image_data")
+    @NotEmpty
+    private byte[] imageData;
+
     public String getName() {
         return name;
     }
@@ -124,5 +136,29 @@ public class WatchEntity extends BaseEntity {
 
     public void setCreated(Date created) {
         this.created = created;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    public String getImageType() {
+        return imageType;
+    }
+
+    public void setImageType(String imageType) {
+        this.imageType = imageType;
+    }
+
+    public byte[] getImageData() {
+        return imageData;
+    }
+
+    public void setImageData(byte[] imageData) {
+        this.imageData = imageData;
     }
 }
