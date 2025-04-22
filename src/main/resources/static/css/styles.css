@@ -389,6 +389,10 @@
     background-color: var(--main-color);
 }
 
+.bi {
+    font-size: 32px;
+}
+
 #sidebarDesktop {
     top: 13%;
     height: 450px;
