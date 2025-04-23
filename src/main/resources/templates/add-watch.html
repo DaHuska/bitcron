@@ -145,7 +145,8 @@
                                 <input th:field="*{name}"
                                        type="text" placeholder="Name Product" class="form-control rounded-2"
                                        id="name">
-                                <p class="alert alert-danger mt-2 py-2">
+                                <p class="alert alert-danger mt-2 py-2"
+                                    th:if="${#fields.hasErrors('name')}">
                                     Product name is required!
                                 </p>
                             </div>
@@ -158,7 +159,8 @@
                                               rows="5"
                                               id="description">
                                     </textarea>
-                                <p class="alert alert-danger mt-2 py-2">
+                                <p class="alert alert-danger mt-2 py-2"
+                                    th:if="${#fields.hasErrors('description')}">
                                     Description is required!
                                 </p>
                             </div>
@@ -170,7 +172,8 @@
                                 <input th:field="*{brand}"
                                        type="text" placeholder="Brand" class="form-control rounded-2"
                                        id="brand">
-                                <p class="alert alert-danger mt-2 py-2">
+                                <p class="alert alert-danger mt-2 py-2"
+                                    th:if="${#fields.hasErrors('brand')}">
                                     Brand is required!
                                 </p>
                             </div>
@@ -179,8 +182,9 @@
                                 <input th:field="*{model}"
                                        type="text" placeholder="Model" class="form-control rounded-2"
                                        id="model">
-                                <p class="alert alert-danger mt-2 py-2">
-                                    model is required!
+                                <p class="alert alert-danger mt-2 py-2"
+                                    th:if="${#fields.hasErrors('model')}">
+                                    Model is required!
                                 </p>
                             </div>
                             <div class="form-group mechanism-option-box col-6">
@@ -193,7 +197,8 @@
                                             th:value="${movement}">
                                     </option>
                                 </select>
-                                <p class="alert alert-danger mt-2 py-2">
+                                <p class="alert alert-danger mt-2 py-2"
+                                    th:if="${#fields.hasErrors('movement')}">
                                     Movement type is required!
                                 </p>
                             </div>
@@ -207,7 +212,8 @@
                                             th:value="${crystal}">
                                     </option>
                                 </select>
-                                <p class="alert alert-danger mt-2 py-2">
+                                <p class="alert alert-danger mt-2 py-2"
+                                    th:if="${#fields.hasErrors('crystal')}">
                                     Movement type is required!
                                 </p>
                             </div>
@@ -222,7 +228,8 @@
                                             th:value="${strap}">
                                     </option>
                                 </select>
-                                <p class="alert alert-danger mt-2 py-2">
+                                <p class="alert alert-danger mt-2 py-2"
+                                    th:if="${#fields.hasErrors('strap')}">
                                     Strap material is required!
                                 </p>
                             </div>
@@ -231,7 +238,8 @@
                                 <input th:field="*{chassisSize}"
                                        type="text" placeholder="Chassis Size" class="form-control rounded-2"
                                        id="chassisSize">
-                                <p class="alert alert-danger mt-2 py-2">
+                                <p class="alert alert-danger mt-2 py-2"
+                                    th:if="${#fields.hasErrors('chassisSize')}">
                                     Chassis size is required!
                                 </p>
                             </div>
@@ -260,7 +268,8 @@
                                 <input th:field="*{stock}"
                                        type="text" placeholder="Stock" class="form-control rounded-2"
                                        id="stock">
-                                <p class="alert alert-danger mt-2 py-2">
+                                <p class="alert alert-danger mt-2 py-2"
+                                    th:if="${#fields.hasErrors('stock')}">
                                     Stock quantity is required!
                                 </p>
                             </div>
