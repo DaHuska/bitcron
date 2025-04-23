@@ -174,6 +174,15 @@
                                     Brand is required!
                                 </p>
                             </div>
+                            <div class="form-group model-option-box col-6">
+                                <label class="mt-4 mb-2" for="brand">Model</label >
+                                <input th:field="*{model}"
+                                       type="text" placeholder="Model" class="form-control rounded-2"
+                                       id="model">
+                                <p class="alert alert-danger mt-2 py-2">
+                                    model is required!
+                                </p>
+                            </div>
                             <div class="form-group mechanism-option-box col-6">
                                 <label class="mt-4 mb-2" for="movement">Movement</label>
                                 <select th:field="*{movement}"
@@ -182,6 +191,20 @@
                                     <option th:each="movement: ${T(bg.softuni.bitchron.model.enums.MovementType).values()}"
                                             th:text="${movement.getMovement()}"
                                             th:value="${movement}">
+                                    </option>
+                                </select>
+                                <p class="alert alert-danger mt-2 py-2">
+                                    Movement type is required!
+                                </p>
+                            </div>
+                            <div class="form-group mechanism-option-box col-6">
+                                <label class="mt-4 mb-2" for="crystal">Crystal</label>
+                                <select th:field="*{crystal}"
+                                        class="form-control rounded-2" id="crystal">
+                                    <option value="">Select value</option>
+                                    <option th:each="crystal: ${T(bg.softuni.bitchron.model.enums.CrystalType).values()}"
+                                            th:text="${crystal.getCrystalType()}"
+                                            th:value="${crystal}">
                                     </option>
                                 </select>
                                 <p class="alert alert-danger mt-2 py-2">
