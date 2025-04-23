@@ -1,5 +1,6 @@
 package bg.softuni.bitchron.model.dto;
 
+import bg.softuni.bitchron.model.enums.CrystalType;
 import bg.softuni.bitchron.model.enums.MovementType;
 import bg.softuni.bitchron.model.enums.StrapType;
 import jakarta.validation.constraints.NotBlank;
@@ -15,8 +16,14 @@ public class WatchDTO {
     @NotBlank
     private String brand;
 
+    @NotBlank
+    private String model;
+
     @NotNull
     private MovementType movement;
+
+    @NotNull
+    private CrystalType crystal;
 
     @NotNull
     private StrapType strap;
@@ -49,6 +56,22 @@ public class WatchDTO {
 
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public CrystalType getCrystal() {
+        return crystal;
+    }
+
+    public void setCrystal(CrystalType crystal) {
+        this.crystal = crystal;
     }
 
     public MovementType getMovement() {
