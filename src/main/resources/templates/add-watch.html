@@ -243,6 +243,22 @@
                                     Chassis size is required!
                                 </p>
                             </div>
+                            <div class="form-group mechanism-option-box col-12">
+                                <label class="mt-4 mb-2" for="waterResistance">Water Resistance</label>
+                                <select th:field="*{waterResistance}"
+                                        th:type="text"
+                                        class="form-control rounded-2" id="waterResistance">
+                                    <option value="">Select value</option>
+                                    <option th:each="res: ${T(bg.softuni.bitchron.model.enums.WaterResistanceType).values()}"
+                                            th:text="${res.getResistance()}"
+                                            th:value="${res}">
+                                    </option>
+                                </select>
+                                <p class="alert alert-danger mt-2 py-2"
+                                   th:if="${#fields.hasErrors('waterResistance')}">
+                                    Chassis size is required!
+                                </p>
+                            </div>
                             <div class="form-group d-flex">
 <!--                                TODO: gender or sex-->
                                 <label

@@ -3,6 +3,7 @@ package bg.softuni.bitchron.model.dto;
 import bg.softuni.bitchron.model.enums.CrystalType;
 import bg.softuni.bitchron.model.enums.MovementType;
 import bg.softuni.bitchron.model.enums.StrapType;
+import bg.softuni.bitchron.model.enums.WaterResistanceType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -27,6 +28,9 @@ public class WatchDTO {
 
     @NotNull
     private StrapType strap;
+
+    @NotNull
+    private WaterResistanceType waterResistance;
 
     @NotNull
     private Double chassisSize;
@@ -88,6 +92,14 @@ public class WatchDTO {
 
     public void setStrap(StrapType strap) {
         this.strap = strap;
+    }
+
+    public WaterResistanceType getWaterResistance() {
+        return waterResistance;
+    }
+
+    public void setWaterResistance(WaterResistanceType waterResistance) {
+        this.waterResistance = waterResistance;
     }
 
     public Double getChassisSize() {
