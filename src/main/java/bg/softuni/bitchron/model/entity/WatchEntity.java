@@ -70,95 +70,119 @@ public class WatchEntity extends BaseEntity {
         return name;
     }
 
-    public void setName(String name) {
+    public WatchEntity setName(String name) {
         this.name = name;
+
+        return this;
     }
 
     public String getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
+    public WatchEntity setBrand(String brand) {
         this.brand = brand;
+
+        return this;
     }
 
     public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
+    public WatchEntity setModel(String model) {
         this.model = model;
+
+        return this;
     }
 
     public MovementType getMovement() {
         return movement;
     }
 
-    public void setMovement(MovementType movement) {
+    public WatchEntity setMovement(MovementType movement) {
         this.movement = movement;
+
+        return this;
     }
 
     public CrystalType getCrystal() {
         return crystal;
     }
 
-    public void setCrystal(CrystalType crystal) {
+    public WatchEntity setCrystal(CrystalType crystal) {
         this.crystal = crystal;
+
+        return this;
     }
 
     public StrapType getStrap() {
         return strap;
     }
 
-    public void setStrap(StrapType strap) {
+    public WatchEntity setStrap(StrapType strap) {
         this.strap = strap;
+
+        return this;
     }
 
     public Double getChassisSize() {
         return chassisSize;
     }
 
-    public void setChassisSize(Double chassisSize) {
+    public WatchEntity setChassisSize(Double chassisSize) {
         this.chassisSize = chassisSize;
+
+        return this;
     }
 
     public WaterResistanceType getWaterResistance() {
         return waterResistance;
     }
 
-    public void setWaterResistance(WaterResistanceType waterResistance) {
+    public WatchEntity setWaterResistance(WaterResistanceType waterResistance) {
         this.waterResistance = waterResistance;
+
+        return this;
     }
 
     public Date getCreated() {
         return created;
     }
 
-    public void setCreated(Date created) {
+    public WatchEntity setCreated(Date created) {
         this.created = created;
+
+        return this;
     }
 
     public String getImageName() {
         return imageName;
     }
 
-    public void setImageName(String imageName) {
+    public WatchEntity setImageName(String imageName) {
         this.imageName = imageName;
+
+        return this;
     }
 
     public String getImageType() {
         return imageType;
     }
 
-    public void setImageType(String imageType) {
+    public WatchEntity setImageType(String imageType) {
         this.imageType = imageType;
+
+        return this;
     }
 
     public byte[] getImageData() {
         return imageData;
     }
 
-    public void setImageData(byte[] imageData) {
+    public WatchEntity setImageData(byte[] imageData) {
         this.imageData = imageData;
+
+        return this;
     }
 }
