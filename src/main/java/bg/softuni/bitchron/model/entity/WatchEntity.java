@@ -63,7 +63,7 @@ public class WatchEntity extends BaseEntity {
     @NotBlank
     private String imageType;
 
-    @Column(name = "image_data")
+    @Column(name = "image_data", columnDefinition = "LONGBLOB")
     @NotEmpty
     private byte[] imageData;
 
