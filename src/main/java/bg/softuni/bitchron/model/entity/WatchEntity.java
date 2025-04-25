@@ -8,6 +8,7 @@ import bg.softuni.bitchron.model.validation.DateNotInTheFuture;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.Date;
 
@@ -27,39 +28,39 @@ public class WatchEntity extends BaseEntity {
     private String model;
 
     @Column
-    @NotEmpty
+    @NotNull
     @Enumerated(EnumType.STRING)
     private MovementType movement;
 
     @Column
-    @NotEmpty
+    @NotNull
     @Enumerated(EnumType.STRING)
     private CrystalType crystal;
 
     @Column
-    @NotEmpty
+    @NotNull
     @Enumerated(EnumType.STRING)
     private StrapType strap;
 
     @Column(name = "chassis_size")
-    @NotEmpty
+    @NotNull
     private Double chassisSize;
 
     @Column(name = "water_resistance")
-    @NotEmpty
+    @NotNull
     private WaterResistanceType waterResistance;
 
     @Column
-    @NotEmpty
+    @NotNull
     @DateNotInTheFuture
     private Date created;
 
     @Column(name = "image_name")
-    @NotEmpty
+    @NotBlank
     private String imageName;
 
     @Column(name = "image_type")
-    @NotEmpty
+    @NotBlank
     private String imageType;
 
     @Column(name = "image_data")
