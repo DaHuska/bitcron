@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.Date;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -22,10 +23,17 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void addProduct(WatchDTO watchDTO, MultipartFile image) throws IOException {
-        WatchEntity mappedEntity = modelMapper.map(watchDTO, WatchEntity.class);
+        WatchEntity mappedEntity = mapEntity(watchDTO, image, modelMapper);
 
-        String originalFilename = image.getOriginalFilename();
-        String contentType = image.getContentType();
-        byte[] bytes = image.getBytes();
+        productRepository.save(mappedEntity);
+    }
+
+    private static WatchEntity mapEntity(WatchDTO watchDTO, MultipartFile image, ModelMapper modelMapper) throws IOException {
+        return modelMapper
+                .map(watchDTO, WatchEntity.class)
+                .setImageName(image.getOriginalFilename())
+                .setImageType(image.getContentType())
+                .setImageData(image.getBytes())
+                .setCreated(new Date());
     }
 }
