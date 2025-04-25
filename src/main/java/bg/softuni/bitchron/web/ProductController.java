@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -41,7 +42,7 @@ public class ProductController {
     }
 
     @PostMapping("/add-watch")
-    public String addWatch(@Valid WatchDTO watchDTO, @RequestParam("productImage") MultipartFile image,
+    public String addWatch(@Valid WatchDTO watchDTO, @NotNull @RequestParam("productImage") MultipartFile image,
                            BindingResult bindingResult,
                            RedirectAttributes redirectAttributes) throws IOException {
 
