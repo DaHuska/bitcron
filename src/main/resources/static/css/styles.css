@@ -389,16 +389,12 @@
     background-color: var(--main-color);
 }
 
-.bi {
-    font-size: 32px;
-}
-
 #sidebarDesktop {
     top: 13%;
     height: 450px;
 }
 
-.new-product-section .aside-wrap-menu, .new-product-container {
+.new-product-section .aside-wrap-menu, .new-product-container, .new-offer-container {
     width: 20vw;
 }
 
@@ -413,7 +409,9 @@
 .new-product-section .aside-wrap-menu h4,
 .new-product-section .aside-wrap-menu li,
 .new-product-section .new-product-container h6,
-.new-product-section .wrapper-new-product label {
+.new-offer-container h6,
+.new-product-section .wrapper-new-product label,
+.wrapper-new-offer label {
     color: var(--secondary-color) !important;
 }
 
@@ -421,12 +419,12 @@
     margin: 1rem 0;
 }
 
-.new-product-container {
+.new-product-container, .new-offer-container {
     padding-top: 1rem;
     width: 80vw;
 }
 
-.new-product-container h4 {
+.new-product-container h4, .new-offer-container h4 {
     color: #9aacc9 !important;
     opacity: 0.6;
 }
@@ -443,7 +441,7 @@
     transition: 0.5s;
 }
 
-.wrapper-new-product, .wrapper-gallery {
+.wrapper-new-product, .wrapper-gallery, .wrapper-new-offer {
     width: 40vw;
 }
 
@@ -469,11 +467,11 @@
         text-align: center;
     }
 
-    .new-product-container, .new-product-form {
+    .new-product-container, .new-product-form, .new-offer-container {
         width: 90vw;
     }
 
-    .wrapper-new-product, .wrapper-gallery {
+    .wrapper-new-product, .wrapper-gallery, .wrapper-new-offer {
         width: 90vw;
     }
 
@@ -747,7 +745,6 @@ textarea {
 
 /* Media properties */
 @media (max-width: 991px) {
-    /* TODO: what to do with banner design mobile mode */
     #watchBanner {
         display: none;
     }

@@ -139,61 +139,13 @@
 
     <div class="offers__container d-flex flex-wrap text-center my-auto">
       <div class="row">
-        <div class="col-md-4 col-lg-3 mb-2 mb-md-4">
+        <div class="col-md-4 col-lg-3 mb-2 mb-md-4"
+          th:each="watch: ${watches}">
           <div class="card d-flex">
             <img src="images/watches/maserati aqua.png" class="img-fluid" alt="" />
             <div class="card-body">
-              <h5 class="card-title">Maserati Ricordo</h5>
-              <p class="card-text">asdadasdadsasdasdasds</p>
-              <a href="#" class="btn btn-danger">Buy now</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 mb-2 mb-md-4">
-          <div class="card d-flex">
-            <img src="images/watches/maserati aqua.png" class="img-fluid" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Maserati Ricordo</h5>
-              <p class="card-text">asdadasdadsasdasdasds</p>
-              <a href="#" class="btn btn-danger">Buy now</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 mb-2 mb-md-4">
-          <div class="card d-flex">
-            <img src="images/watches/maserati aqua.png" class="img-fluid" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Maserati Ricordo</h5>
-              <p class="card-text">asdadasdadsasdasdasds</p>
-              <a href="#" class="btn btn-danger">Buy now</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 mb-2 mb-md-4">
-          <div class="card d-flex">
-            <img src="images/watches/maserati aqua.png" class="img-fluid" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Maserati Ricordo</h5>
-              <p class="card-text">asdadasdadsasdasdasds</p>
-              <a href="#" class="btn btn-danger">Buy now</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 mb-2 mb-md-4">
-          <div class="card d-flex">
-            <img src="images/watches/maserati aqua.png" class="img-fluid" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Maserati Ricordo</h5>
-              <p class="card-text">asdadasdadsasdasdasds</p>
-              <a href="#" class="btn btn-danger">Buy now</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3 mb-2 mb-md-4">
-          <div class="card d-flex">
-            <img src="images/watches/maserati aqua.png" class="img-fluid" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Maserati Ricordo</h5>
+              <h5 class="card-title"
+                  th:text="|${watch.getBrand()} ${watch.getModel()}|"></h5>
               <p class="card-text">asdadasdadsasdasdasds</p>
               <a href="#" class="btn btn-danger">Buy now</a>
             </div>
