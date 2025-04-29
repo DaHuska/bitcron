@@ -5,6 +5,7 @@ import bg.softuni.bitchron.model.enums.MovementType;
 import bg.softuni.bitchron.model.enums.StrapType;
 import bg.softuni.bitchron.model.enums.WaterResistanceType;
 import bg.softuni.bitchron.model.validation.DateNotInTheFuture;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -66,6 +67,11 @@ public class WatchEntity extends BaseEntity {
     @Column(name = "image_data", columnDefinition = "LONGBLOB")
     @NotEmpty
     private byte[] imageData;
+
+    @OneToOne(mappedBy = "watch", targetEntity = OfferEntity.class)
+    @JoinColumn(name = "offer_id")
+    @Nullable
+    private OfferEntity offer;
 
     public String getName() {
         return name;
@@ -185,5 +191,13 @@ public class WatchEntity extends BaseEntity {
         this.imageData = imageData;
 
         return this;
+    }
+
+    public OfferEntity getOffer() {
+        return offer;
+    }
+
+    public void setOffer(OfferEntity offer) {
+        this.offer = offer;
     }
 }

@@ -19,7 +19,7 @@ public class OfferEntity extends BaseEntity {
     @NotNull
     private Double discount;
 
-    @OneToOne(mappedBy = "offer", targetEntity = WatchEntity.class)
+    @OneToOne
     private WatchEntity watch;
 
     public String getDescription() {
