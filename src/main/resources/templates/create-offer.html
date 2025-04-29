@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragments/head}"></head>
+<body>
+<!-- Navbar start -->
+<nav th:replace="~{fragments/navbar}"></nav>
+<!-- Navbar EOF -->
+
+<!-- Section -->
+<section class="d-flex new-product-section">
+    <div class="mobile-menu position-absolute d-flex d-lg-none">
+        <aside class="aside-wrap-menu start-0 d-block ps-lg-3 pt-3 pt-lg-0">
+            <div class="main-menu">
+                <h4>Main Menu</h4>
+                <ul class="menu-links">
+                    <!-- TODO: Center the SVGs -->
+                    <li class="menu-item list-unstyled align-items-center">
+                        <a href="#" class="main-menu-link text-decoration-none">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            Sales
+                        </a>
+                    </li>
+                    <li class="menu-item list-unstyled">
+                        <a href="#" class="main-menu-link text-decoration-none">
+                            <i class="fa-solid fa-swatchbook"></i>
+                            Product
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="transactions">
+                <h4>Transactions</h4>
+                <ul class="transaction-links">
+                    <li class="transaction-item list-unstyled">
+                        <a href="#" class="transaction-link text-decoration-none">
+                            <i class="fa-solid fa-wallet"></i>
+                            Payment
+                        </a>
+                    </li>
+                    <li class="transaction-item list-unstyled">
+                        <a href="#" class="transaction-link text-decoration-none">
+                            <i class="fa-solid fa-receipt"></i>
+                            Refunds
+                        </a>
+                    </li>
+                    <li class="transaction-item list-unstyled">
+                        <a href="#" class="transaction-link text-decoration-none">
+                            <i class="fa-solid fa-compass"></i>
+                            Explorer
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="general">
+                <h4>General</h4>
+                <ul class="general-links">
+                    <li class="general-item list-unstyled">
+                        <a href="#" class="general-link text-decoration-none">
+                            <i class="fa-solid fa-bell"></i>
+                            Notifications
+                        </a>
+                    </li>
+                    <li class="general-item list-unstyled">
+                        <a href="#" class="general-link text-decoration-none">
+                            <i class="fa-solid fa-gear"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <img th:src="@{/images/new_product_aside_menu_icon.png}" class="aside_menu_button start-0 z-1 ms-2 d-block d-lg-none p-2" width="48" height="48" alt="">
+    </div>
+    <aside class="aside-wrap-menu position-sticky d-none d-lg-block ps-3" id="sidebarDesktop">
+        <div class="main-menu">
+            <h4>Main Menu</h4>
+            <ul class="menu-links">
+                <li class="menu-item list-unstyled align-items-center">
+                    <a href="#" class="main-menu-link text-decoration-none">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        Sales
+                    </a>
+                </li>
+                <li class="menu-item list-unstyled">
+                    <a href="#" class="main-menu-link text-decoration-none">
+                        <i class="fa-solid fa-swatchbook"></i>
+                        Product
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="transactions">
+            <h4>Transactions</h4>
+            <ul class="transaction-links">
+                <li class="transaction-item list-unstyled">
+                    <a href="#" class="transaction-link text-decoration-none">
+                        <i class="fa-solid fa-wallet"></i>
+                        Payment
+                    </a>
+                </li>
+                <li class="transaction-item list-unstyled">
+                    <a href="#" class="transaction-link text-decoration-none">
+                        <i class="fa-solid fa-receipt"></i>
+                        Refunds
+                    </a>
+                </li>
+                <li class="transaction-item list-unstyled">
+                    <a href="#" class="transaction-link text-decoration-none">
+                        <i class="fa-solid fa-compass"></i>
+                        Explorer
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="general">
+            <h4>General</h4>
+            <ul class="general-links">
+                <li class="general-item list-unstyled">
+                    <i class="fa-solid fa-bell"></i>
+                    Notifications
+                </li>
+                <li class="general-item list-unstyled">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- Aside Menu EOF -->
+
+    <div class="new-offer-container d-flex">
+        <form th:action="@{/products/create-offer}"
+              th:method="POST"
+              th:object="${offerDTO}"
+              class="new-product-form align-items-start">
+            <div class="new-offer-wrapper d-lg-flex">
+                <div class="wrapper-new-offer">
+                    <div class="description">
+                        <h4>General Information</h4>
+                        <div class="form-group new-product-input-box">
+                            <label for="watch" class="mt-4 mb-2">Watch</label>
+                            <select th:field="*{watch}"
+                                    class="form-control rounded-2"
+                                    id="watch">
+                                <option value="">Select value</option>
+                                <option th:each="watch: ${watches}"
+                                        th:text="|${watch.getBrand()} ${watch.getModel()}|"
+                                        th:value="${watch.getId()}"></option>
+                            </select>
+                            <p class="alert alert-danger mt-2 py-2">
+                                Name product is required!
+                            </p>
+                        </div>
+                        <div class="form-group new-product-input-box">
+                            <label for="description" class="mt-4 mb-2">Description</label>
+                            <input class="d-none">
+                                <textarea class="form-control rounded-2 position-relative"
+                                          th:field="*{description}"
+                                          placeholder="Description"
+                                          rows="5"
+                                          id="description">
+                                </textarea>
+                            <p class="alert alert-danger mt-2 py-2">
+                                Description is required!
+                            </p>
+                        </div>
+                    </div>
+                    <h4>Pricing and Stock</h4>
+                    <div class="row">
+                        <div class="form-group new-product-input-box col-12 col-lg-6">
+                            <label for="price" class="mt-4 mb-2">Price</label>
+                            <input th:field="*{price}"
+                                   type="text"
+                                   placeholder="Price"
+                                   id="price"
+                                   class="form-control rounded-2">
+                            <p class="alert alert-danger mt-2 py-2">
+                                Price is required!
+                            </p>
+                        </div>
+                        <div class="form-group new-product-input-box col-12 col-lg-6">
+                            <label for="discount" class="mt-4 mb-2">Discount</label>
+                            <input th:field="*{discount}"
+                                   type="text"
+                                   placeholder="Discount"
+                                   id="discount"
+                                   class="form-control rounded-2">
+                            <p class="alert alert-danger mt-2 py-2">
+                                Discount is required!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-gallery d-flex justify-content-center">
+                    <div class="gallery text-white">
+                        <div class="mb-4 d-flex justify-content-center">
+                            <img id="productImage" src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg"
+                                 alt="example placeholder"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-holder d-flex justify-content-center py-5">
+                <input type="submit" class="btn text-center py-3 px-4 rounded-5" value="Add New Product">
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Section EOF -->
+
+<th:block th:replace="~{fragments/script}"></th:block>
+</body>
+
+</html>
