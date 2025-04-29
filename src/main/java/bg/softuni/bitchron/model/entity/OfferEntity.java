@@ -7,9 +7,6 @@ import jakarta.validation.constraints.NotNull;
 @Entity
 @Table(name = "offers")
 public class OfferEntity extends BaseEntity {
-    @Version
-    private Integer version;
-
     @Column
     @NotBlank
     private String description;
@@ -24,14 +21,6 @@ public class OfferEntity extends BaseEntity {
 
     @OneToOne(mappedBy = "offer", targetEntity = WatchEntity.class)
     private WatchEntity watch;
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
 
     public String getDescription() {
         return description;
