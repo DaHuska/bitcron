@@ -150,20 +150,6 @@
                                     Product name is required!
                                 </p>
                             </div>
-                            <div class="form-group new-product-input-box">
-                                <label class="mt-4 mb-2" for="description">Description</label>
-                                <input class="d-none">
-                                    <textarea th:field="*{description}"
-                                              class="form-control rounded-2 position-relative"
-                                              placeholder="Description"
-                                              rows="5"
-                                              id="description">
-                                    </textarea>
-                                <p class="alert alert-danger mt-2 py-2"
-                                    th:if="${#fields.hasErrors('description')}">
-                                    Description is required!
-                                </p>
-                            </div>
                         </div>
                         <div class="characteristics mt-5 row">
                             <h4>Watch Characteristics</h4>
