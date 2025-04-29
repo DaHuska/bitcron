@@ -12,9 +12,6 @@ public class WatchDTO {
     private String name;
 
     @NotBlank
-    private String description;
-
-    @NotBlank
     private String brand;
 
     @NotBlank
@@ -44,14 +41,6 @@ public class WatchDTO {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getBrand() {
