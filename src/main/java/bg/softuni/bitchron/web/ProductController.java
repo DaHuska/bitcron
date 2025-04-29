@@ -2,13 +2,9 @@ package bg.softuni.bitchron.web;
 
 import bg.softuni.bitchron.model.dto.OfferRegisterDTO;
 import bg.softuni.bitchron.model.dto.WatchDTO;
+import bg.softuni.bitchron.model.entity.OfferEntity;
 import bg.softuni.bitchron.model.entity.WatchEntity;
-import bg.softuni.bitchron.repository.ProductRepository;
 import bg.softuni.bitchron.service.ProductService;
-import jakarta.servlet.ServletResponse;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Controller;
@@ -17,7 +13,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.IOException;
@@ -35,9 +30,9 @@ public class ProductController {
 
     @GetMapping("/watches")
     public String watches(Model model) {
-        List<WatchEntity> watches = productService.getAllWatches();
+        List<OfferEntity> offers = productService.getAllOffers();
 
-        model.addAttribute("watches", watches);
+        model.addAttribute("offers", offers);
 
         return "watches";
     }

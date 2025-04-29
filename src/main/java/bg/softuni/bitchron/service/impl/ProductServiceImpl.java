@@ -46,6 +46,13 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public List<OfferEntity> getAllOffers() {
+        List<OfferEntity> offers = offerRepository.findAll();
+
+        return Collections.unmodifiableList(offers);
+    }
+
+    @Override
     public List<WatchEntity> getAllWatches() {
         List<WatchEntity> watches = productRepository.findAll();
 
