@@ -142,7 +142,7 @@
         <div class="col-md-4 col-lg-3 mb-2 mb-md-4"
              th:each="offer: ${offers}">
           <div class="card d-flex">
-            <img src="images/watches/maserati aqua.png" class="img-fluid" alt="" />
+            <img th:src="'data:image/jpeg;base64,'+${offer.getWatch().getImageData()}" class="img-fluid" alt="" />
             <div class="card-body">
               <h5 class="card-title"
                   th:text="|${offer.getWatch().getBrand()} ${offer.getWatch().getModel()}|"></h5>
