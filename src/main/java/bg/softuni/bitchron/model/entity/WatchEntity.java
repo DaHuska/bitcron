@@ -64,13 +64,13 @@ public class WatchEntity extends BaseEntity {
     @NotBlank
     private String imageType;
 
+    @Lob
     @Column(name = "image_data", columnDefinition = "LONGBLOB")
     @NotEmpty
-    private byte[] imageData;
+    private String imageData;
 
     @OneToOne(mappedBy = "watch", targetEntity = OfferEntity.class)
     @JoinColumn(name = "offer_id")
-    @Nullable
     private OfferEntity offer;
 
     public String getName() {
@@ -183,11 +183,11 @@ public class WatchEntity extends BaseEntity {
         return this;
     }
 
-    public byte[] getImageData() {
+    public String getImageData() {
         return imageData;
     }
 
-    public WatchEntity setImageData(byte[] imageData) {
+    public WatchEntity setImageData(String imageData) {
         this.imageData = imageData;
 
         return this;

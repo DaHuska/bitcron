@@ -9,14 +9,14 @@ import bg.softuni.bitchron.repository.ProductRepository;
 import bg.softuni.bitchron.service.ProductService;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -28,21 +28,6 @@ public class ProductServiceImpl implements ProductService {
         this.productRepository = productRepository;
         this.offerRepository = offerRepository;
         this.modelMapper = modelMapper;
-    }
-
-    @Override
-    public void addProduct(WatchDTO watchDTO, MultipartFile image) throws IOException {
-        WatchEntity mappedEntity = mapWatchEntity(watchDTO, image, modelMapper);
-
-        productRepository.save(mappedEntity);
-    }
-
-    @Override
-    @Transactional
-    public void createOffer(OfferRegisterDTO offerRegisterDTO, WatchEntity watch) {
-        OfferEntity offer = mapOfferEntity(offerRegisterDTO, watch, modelMapper);
-
-        offerRepository.saveAndFlush(offer);
     }
 
     @Override
@@ -64,12 +49,27 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findById(id);
     }
 
+    @Override
+    public void addProduct(WatchDTO watchDTO, MultipartFile image) throws IOException {
+        WatchEntity mappedEntity = mapWatchEntity(watchDTO, image, modelMapper);
+
+        productRepository.save(mappedEntity);
+    }
+
+    @Override
+    @Transactional
+    public void createOffer(OfferRegisterDTO offerRegisterDTO, WatchEntity watch) {
+        OfferEntity offer = mapOfferEntity(offerRegisterDTO, watch, modelMapper);
+
+        offerRepository.saveAndFlush(offer);
+    }
+
     private static WatchEntity mapWatchEntity(WatchDTO watchDTO, MultipartFile image, ModelMapper modelMapper) throws IOException {
         return modelMapper
                 .map(watchDTO, WatchEntity.class)
                 .setImageName(image.getOriginalFilename())
                 .setImageType(image.getContentType())
-                .setImageData(image.getBytes())
+                .setImageData(Base64.getEncoder().encodeToString(image.getBytes()))
                 .setCreated(new Date());
     }
 
