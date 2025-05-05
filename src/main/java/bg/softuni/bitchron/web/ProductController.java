@@ -82,12 +82,6 @@ public class ProductController {
     public String createOffer(@Valid OfferRegisterDTO offerRegisterDTO,
                               BindingResult bindingResult,
                               RedirectAttributes redirectAttributes) {
-        Optional<WatchEntity> watch = productService.getWatchById(Long.valueOf(offerRegisterDTO.getWatch()));
-
-        if (watch.isEmpty()) {
-            bindingResult.addError(new ObjectError("watchError", "Watch not found!"));
-        }
-
         if (bindingResult.hasErrors()) {
             redirectAttributes
                     .addFlashAttribute("offerDTO", offerRegisterDTO);
@@ -95,6 +89,12 @@ public class ProductController {
                     .addFlashAttribute("org.springframework.validation.BindingResult.offerDTO", bindingResult);
 
             return "redirect:/products/create-offer";
+        }
+
+        Optional<WatchEntity> watch = productService.getWatchById(Long.valueOf(offerRegisterDTO.getWatch()));
+
+        if (watch.isEmpty()) {
+            bindingResult.addError(new ObjectError("watchError", "Watch not found!"));
         }
 
         productService.createOffer(offerRegisterDTO, watch.get());
