@@ -8,6 +8,7 @@
     /* #0f1633 */
     --main-color: #040a1e;
     --secondary-color: #9aacc9;
+    --tertiary-color: #ef476f;
 }
 
 .navbar, #supporters {
@@ -493,6 +494,49 @@
     }
 }
 
+/* Product individual page */
+.product-container {
+    background-color: var(--main-color);
+    color: var(--secondary-color) !important;
+}
+
+.product-container p {
+    color: var(--secondary-color) !important;
+}
+
+.product-image {
+    max-height: 500px;
+    max-width: 400px;
+    object-fit: cover;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover, .thumbnail.active {
+    opacity: 1;
+}
+
+.add-cart-btn {
+    background-color: var(--tertiary-color) !important;
+    color: white !important;
+}
+
+.add-cart-btn:hover {
+    background-color: #D63F63 !important;
+    transition: 0.5s;
+}
+
+.product-container {
+    min-height: 80vh;
+}
+
 /* Link to Men and Women watches page */
 #MenAndWomenLinks {
     background-color: var(--main-color);
@@ -551,8 +595,8 @@
 }
 
 .card-body .btn {
-    background-color: #ef476f !important;
-    border-color: #ef476f;
+    background-color: var(--tertiary-color) !important;
+    border-color: var(--tertiary-color);
     color: var(--main-color);
 }
 

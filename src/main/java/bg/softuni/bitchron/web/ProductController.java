@@ -4,6 +4,7 @@ import bg.softuni.bitchron.model.dto.OfferRegisterDTO;
 import bg.softuni.bitchron.model.dto.WatchDTO;
 import bg.softuni.bitchron.model.entity.OfferEntity;
 import bg.softuni.bitchron.model.entity.WatchEntity;
+import bg.softuni.bitchron.repository.OfferRepository;
 import bg.softuni.bitchron.service.ProductService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -23,9 +24,11 @@ import java.util.Optional;
 @RequestMapping("/products")
 public class ProductController {
     private final ProductService productService;
+    private final OfferRepository offerRepository;
 
-    public ProductController(ProductService productService) {
+    public ProductController(ProductService productService, OfferRepository offerRepository) {
         this.productService = productService;
+        this.offerRepository = offerRepository;
     }
 
     @GetMapping("/watches")
@@ -100,5 +103,18 @@ public class ProductController {
         productService.createOffer(offerRegisterDTO, watch.get());
 
         return "redirect:/products/watches";
+    }
+
+    @GetMapping("/watches/{id}")
+    public String getProductByID(@PathVariable("id") Long offerID, Model model) {
+        Optional<OfferEntity> offer = offerRepository.findById(offerID);
+
+        if (offer.isEmpty()) {
+//            TODO: Validate invalid access link
+        }
+
+        model.addAttribute("offer", offer.get());
+
+        return "product-page";
     }
 }

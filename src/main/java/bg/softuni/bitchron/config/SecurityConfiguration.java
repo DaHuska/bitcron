@@ -34,7 +34,7 @@ public class SecurityConfiguration {
                         // Allow anyone to see
                         .requestMatchers("/", "/users/login", "/users/register", "/users/logout").permitAll()
                         .requestMatchers("/home").permitAll()
-                        .requestMatchers("/products/add-watch", "/products/create-offer", "/products/watches").permitAll()
+                        .requestMatchers("/products/add-watch", "/products/create-offer", "/products/watches", "/products/watches/{id}").permitAll()
                         // status code 999 error
                         .requestMatchers("/error").permitAll()
                         // All other requests are authenticated
