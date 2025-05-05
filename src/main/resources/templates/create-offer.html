@@ -131,7 +131,7 @@
     </aside>
     <!-- Aside Menu EOF -->
 
-    <div class="new-offer-container d-flex">
+    <div class="new-offer-container d-flex vh-100">
         <form th:action="@{/products/create-offer}"
               th:method="POST"
               th:object="${offerDTO}"
@@ -150,7 +150,8 @@
                                         th:text="|${watch.getBrand()} ${watch.getModel()}|"
                                         th:value="${watch.getId()}"></option>
                             </select>
-                            <p class="alert alert-danger mt-2 py-2">
+                            <p class="alert alert-danger mt-2 py-2"
+                                th:if="${#fields.hasErrors('watch')}">
                                 Name product is required!
                             </p>
                         </div>
@@ -163,7 +164,8 @@
                                           rows="5"
                                           id="description">
                                 </textarea>
-                            <p class="alert alert-danger mt-2 py-2">
+                            <p class="alert alert-danger mt-2 py-2"
+                                th:if="${#fields.hasErrors('description')}">
                                 Description is required!
                             </p>
                         </div>
@@ -177,7 +179,8 @@
                                    placeholder="Price"
                                    id="price"
                                    class="form-control rounded-2">
-                            <p class="alert alert-danger mt-2 py-2">
+                            <p class="alert alert-danger mt-2 py-2"
+                                th:if="${#fields.hasErrors('price')}">
                                 Price is required!
                             </p>
                         </div>
@@ -188,7 +191,8 @@
                                    placeholder="Discount"
                                    id="discount"
                                    class="form-control rounded-2">
-                            <p class="alert alert-danger mt-2 py-2">
+                            <p class="alert alert-danger mt-2 py-2"
+                                th:if="${#fields.hasErrors('discount')}">
                                 Discount is required!
                             </p>
                         </div>
