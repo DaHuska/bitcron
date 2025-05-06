@@ -36,7 +36,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/", "/users/login", "/users/register", "/users/logout").permitAll()
                         .requestMatchers("/home").permitAll()
                         .requestMatchers("/products/watches", "/products/watches/{id}").permitAll()
-                        .requestMatchers("/error").permitAll()
+                        .requestMatchers("/error", "/errors/404").permitAll()
                         .requestMatchers("/products/create-offer", "/products/add-watch").hasRole(String.valueOf(UserRole.ADMIN))
                         // All other requests are authenticated
                         .anyRequest().authenticated()

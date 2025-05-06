@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/head}"></head>
+<body>
+<div class="error-container d-flex justify-content-center align-items-center">
+    <div class="text-center">
+        <div>
+            <h1>404</h1>
+        </div>
+        <div class="mb-4">
+            <h2>Time Block Not Found!</h2>
+        </div>
+        <div>
+            <p class="m-0">This watch missed the chain.</p>
+        </div>
+        <div>
+            <p class="m-0">But don’t worry — you can still sync up with our finest timepieces.</p>
+        </div>
+        <div class="mt-5">
+            <button class="btn btn-primary rounded-5 me-2">Return to Home</button>
+            <button class="btn btn-primary rounded-5 ms-2">View Collections</button>
+        </div>
+    </div>
+</div>
+<th:block th:replace="~{fragments/script}"></th:block>
+</body>
+</html>

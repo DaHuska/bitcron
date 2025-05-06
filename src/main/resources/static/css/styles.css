@@ -11,6 +11,10 @@
     --tertiary-color: #ef476f;
 }
 
+.fa-solid {
+    color: var(--secondary-color) !important;
+}
+
 .navbar, #supporters {
     background: var(--main-color);
 }
@@ -213,6 +217,33 @@
     width: 100%;
     margin: 0 20%;
     clear: both;
+}
+
+/* Error pages */
+
+.error-container {
+    background-image: url('../images/login-page-bg-img.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: var(--secondary-color);
+}
+
+.error-container h1 {
+    font-size: 12rem;
+}
+
+.error-container h2 {
+    font-size: 2rem;
+}
+
+.error-container p {
+    font-size: 1.2rem;
+}
+
+.error-container button {
+    background-color: var(--tertiary-color);
+    border-color: var(--tertiary-color);
 }
 
 /* Hero section */
