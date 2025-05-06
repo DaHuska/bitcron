@@ -1,5 +1,6 @@
 package bg.softuni.bitchron.config;
 
+import bg.softuni.bitchron.model.enums.UserRole;
 import bg.softuni.bitchron.repository.UserRepository;
 import bg.softuni.bitchron.service.impl.BitChronUserDetailsService;
 import org.modelmapper.ModelMapper;
@@ -34,9 +35,9 @@ public class SecurityConfiguration {
                         // Allow anyone to see
                         .requestMatchers("/", "/users/login", "/users/register", "/users/logout").permitAll()
                         .requestMatchers("/home").permitAll()
-                        .requestMatchers("/products/add-watch", "/products/create-offer", "/products/watches", "/products/watches/{id}").permitAll()
-                        // status code 999 error
+                        .requestMatchers("/products/watches", "/products/watches/{id}").permitAll()
                         .requestMatchers("/error").permitAll()
+                        .requestMatchers("/products/create-offer", "/products/add-watch").hasRole(String.valueOf(UserRole.ADMIN))
                         // All other requests are authenticated
                         .anyRequest().authenticated()
         ).formLogin(
