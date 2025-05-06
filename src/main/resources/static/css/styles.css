@@ -537,6 +537,10 @@
     min-height: 80vh;
 }
 
+.product-details {
+    width: 60%;
+}
+
 /* Link to Men and Women watches page */
 #MenAndWomenLinks {
     background-color: var(--main-color);

@@ -25,7 +25,7 @@
 <!-- Navbar EOF -->
 <!--Main Section-->
 <div class="product-container container pt-5 d-flex">
-    <div class="d-flex product-info row justify-content-between"
+    <div class="d-flex product-info w-100 row justify-content-between"
          th:object="${offer}">
         <!-- Product Images -->
         <div class="watch-img d-flex col-md-6 pb-4 justify-content-center">
@@ -35,10 +35,10 @@
 
         <!-- Product Details -->
         <div class="product-details col-md-6 text-wrap">
-            <h2 class="mb-3" th:text="|*{watch.getBrand()} + *{watch.getModel()}|"></h2>
+            <h2 class="mb-3" th:text="|*{watch.getBrand()} *{watch.getModel()}|"></h2>
             <p class="text-muted mb-4">SKU: WH1000XM4</p>
             <div class="mb-3">
-                <span class="h4 me-2" th:text="*{price}"></span>
+                <span class="h4 me-2" th:text="'$' + *{price}"></span>
                 <span class="text-muted"><s>$399.99</s></span>
             </div>
             <p class="mb-4 text-break" th:text="*{description}"></p>
@@ -47,7 +47,7 @@
                 <input type="number" class="form-control" id="quantity" value="1" min="1" style="width: 80px;">
             </div>
             <button class="add-cart-btn btn btn-lg mb-3 me-2">
-                <i class="bi bi-cart-plus"></i> Add to Cart
+                <i class="fa-solid fa-cart-plus"></i> Add to Cart
             </button>
             <div class="mt-4">
                 <h5>Key Features:</h5>
