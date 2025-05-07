@@ -1,5 +1,6 @@
 package bg.softuni.bitchron.web;
 
+import bg.softuni.bitchron.exception.custom.ProductNotFoundException;
 import bg.softuni.bitchron.model.dto.OfferRegisterDTO;
 import bg.softuni.bitchron.model.dto.WatchDTO;
 import bg.softuni.bitchron.model.entity.OfferEntity;
@@ -110,7 +111,7 @@ public class ProductController {
         Optional<OfferEntity> offer = offerRepository.findById(offerID);
 
         if (offer.isEmpty()) {
-//            TODO: Validate invalid access link
+            throw new ProductNotFoundException("");
         }
 
         model.addAttribute("offer", offer.get());
