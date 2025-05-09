@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="~{fragments/head}"></head>
+<body>
+    <nav th:replace="~{fragments/navbar}"></nav>
+    <section class="container profile-container">
+        <div class="profile-container-wrapper d-flex">
+            <aside class="profile-aside-wrap-menu position-sticky d-none d-lg-block px-3" id="sidebarDesktop">
+                <div class="options-menu">
+                    <ul class="options-links ps-0">
+                        <li class="options-link list-unstyled py-2 my-2">
+                            <button class="btn">
+                                <i class="fa-solid fa-circle-info me-2"></i>
+                                General Info
+                            </button>
+                        </li>
+                        <li class="options-link list-unstyled py-2 my-2">
+                            <button class="btn">
+                                <i class="fa-solid fa-address-card me-2"></i>
+                                Edit Profile
+                            </button>
+                        </li>
+                        <li class="options-link list-unstyled py-2 my-2">
+                            <button class="btn">
+                                <i class="fa-solid fa-location-dot me-2"></i>
+                                Address Info
+                            </button>
+                        </li>
+                        <li class="options-link list-unstyled py-2 my-2">
+                            <button class="btn">
+                                <i class="fa-solid fa-cart-shopping me-2"></i>
+                                Orders
+                            </button>
+                        </li>
+                        <li class="options-link list-unstyled py-2 my-2">
+                            <button class="btn">
+                                <i class="fa-solid fa-heart me-2"></i>
+                                Favorites
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="profile-info-container">
+                <div class="personal-information mb-3 border border-1 rounded-4 p-4">
+                    <h3 class="mb-4"><b>Personal Information</b></h3>
+                    <div class="row">
+                        <div class="col-3 mb-4">
+                            <div class="col-12">
+                                First Name
+                            </div>
+                            <div class="col-12">
+                                <b>empty</b>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <div class="col-12">
+                                Last Name
+                            </div>
+                            <div class="col-12">
+                                <b>empty</b>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <span></span>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <span></span>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <div class="col-12">
+                                Email address
+                            </div>
+                            <div class="col-12">
+                                <b>empty</b>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <div class="col-12">
+                                Phone
+                            </div>
+                            <div class="col-12">
+                                <b>empty</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-address mt-5 border border-1 rounded-4 p-4">
+                    <h3 class="mb-4"><b>Address</b></h3>
+                    <div class="row">
+                        <div class="col-3 mb-4">
+                            <div class="col-12">
+                                Country
+                            </div>
+                            <div class="col-12">
+                                <b>empty</b>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <div class="col-12">
+                                City/State
+                            </div>
+                            <div class="col-12">
+                                <b>empty</b>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <span></span>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <span></span>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <div class="col-12">
+                                Postal Code
+                            </div>
+                            <div class="col-12">
+                                <b>empty</b>
+                            </div>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <div class="col-12">
+                                Address
+                            </div>
+                            <div class="col-12">
+                                <b>empty</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer th:replace="~{fragments/footer}"></footer>
+    <th:block th:replace="~{fragments/script}"></th:block>
+</body>
+</html>

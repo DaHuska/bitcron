@@ -244,6 +244,7 @@
 .error-container button {
     background-color: var(--tertiary-color);
     border-color: var(--tertiary-color);
+    font-size: large;
 }
 
 /* Hero section */
@@ -570,6 +571,44 @@
 
 .product-details {
     width: 60%;
+}
+
+/* Edit User Profile */
+.profile-container {
+    height: 80vh;
+    padding: 3rem 0;
+    width: 100%;
+    color: var(--secondary-color) !important;
+}
+
+.profile-aside-wrap-menu {
+    width: 20vw;
+}
+
+.profile-info-container {
+    width: 70vw;
+}
+
+div.personal-information, div.personal-address {
+    border-color: rgba(154, 172, 201, 0.4) !important;
+}
+
+.personal-information div {
+    font-size: large;
+}
+
+.options-link:hover {
+    border-radius: 0.5rem;
+    background-color: rgba(154, 172, 201, 0.2);
+}
+
+.options-link .btn:hover {
+    color: #ef476f !important;
+}
+
+.options-link .btn {
+    color: var(--secondary-color) !important;
+    font-size: larger;
 }
 
 /* Link to Men and Women watches page */
