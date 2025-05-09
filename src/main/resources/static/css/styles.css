@@ -11,6 +11,10 @@
     --tertiary-color: #ef476f;
 }
 
+body {
+    background-color: var(--main-color) !important;
+}
+
 .fa-solid {
     color: var(--secondary-color) !important;
 }

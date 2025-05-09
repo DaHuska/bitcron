@@ -33,7 +33,7 @@ public class SecurityConfiguration {
                         // All static resources which are situated in js, images, css are available for anyone
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                         // Allow anyone to see
-                        .requestMatchers("/", "/users/login", "/users/register", "/users/logout").permitAll()
+                        .requestMatchers("/", "/users/login", "/users/register", "/users/logout", "/users/profile").permitAll()
                         .requestMatchers("/home").permitAll()
                         .requestMatchers("/products/watches", "/products/watches/{id}").permitAll()
                         .requestMatchers("/error", "/errors/404").permitAll()
