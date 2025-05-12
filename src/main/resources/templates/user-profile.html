@@ -6,49 +6,55 @@
 <head th:replace="~{fragments/head}"></head>
 <body>
     <nav th:replace="~{fragments/navbar}"></nav>
-    <section class="container profile-container">
+    <!-- Section start -->
+    <section class="container-fluid profile-container">
         <div class="profile-container-wrapper d-flex">
-            <aside class="profile-aside-wrap-menu position-sticky d-none d-lg-block px-3" id="sidebarDesktop">
+            <aside class="profile-sidebar-menu position-sticky d-lg-block px-0 px-lg-3" id="sidebarDesktop">
                 <div class="options-menu">
                     <ul class="options-links ps-0">
                         <li class="options-link list-unstyled py-2 my-2">
-                            <button class="btn">
+                            <a href="" class="btn">
                                 <i class="fa-solid fa-circle-info me-2"></i>
                                 General Info
-                            </button>
+                            </a>
                         </li>
                         <li class="options-link list-unstyled py-2 my-2">
-                            <button class="btn">
+                            <a href="" class="btn">
                                 <i class="fa-solid fa-address-card me-2"></i>
                                 Edit Profile
-                            </button>
+                            </a>
                         </li>
                         <li class="options-link list-unstyled py-2 my-2">
-                            <button class="btn">
+                            <a href="" class="btn">
                                 <i class="fa-solid fa-location-dot me-2"></i>
                                 Address Info
-                            </button>
+                            </a>
                         </li>
                         <li class="options-link list-unstyled py-2 my-2">
-                            <button class="btn">
+                            <a href="" class="btn">
                                 <i class="fa-solid fa-cart-shopping me-2"></i>
                                 Orders
-                            </button>
+                            </a>
                         </li>
                         <li class="options-link list-unstyled py-2 my-2">
-                            <button class="btn">
+                            <a href="" class="btn">
                                 <i class="fa-solid fa-heart me-2"></i>
                                 Favorites
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </aside>
             <div class="profile-info-container">
                 <div class="personal-information mb-3 border border-1 rounded-4 p-4">
-                    <h3 class="mb-4"><b>Personal Information</b></h3>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3><b>Personal Information</b></h3>
+                        <a href="" class="edit-profile-link">
+                            <i class="fa-solid fa-pen-to-square fa-fw"></i>
+                        </a>
+                    </div>
                     <div class="row">
-                        <div class="col-3 mb-4">
+                        <div class="col-6 col-sm-3 mb-4">
                             <div class="col-12">
                                 First Name
                             </div>
@@ -56,7 +62,7 @@
                                 <b>empty</b>
                             </div>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="col-6 col-sm-3 mb-2">
                             <div class="col-12">
                                 Last Name
                             </div>
@@ -64,13 +70,13 @@
                                 <b>empty</b>
                             </div>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="d-none d-sm-block col-sm-3 mb-2">
                             <span></span>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="d-none d-sm-block col-sm-3 mb-2">
                             <span></span>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="col-6 col-sm-3 mb-2">
                             <div class="col-12">
                                 Email address
                             </div>
@@ -78,7 +84,7 @@
                                 <b>empty</b>
                             </div>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="col-6 col-sm-3 mb-2">
                             <div class="col-12">
                                 Phone
                             </div>
@@ -89,9 +95,14 @@
                     </div>
                 </div>
                 <div class="personal-address mt-5 border border-1 rounded-4 p-4">
-                    <h3 class="mb-4"><b>Address</b></h3>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3><b>Address</b></h3>
+                        <a href="" class="edit-profile-link">
+                            <i class="fa-solid fa-pen-to-square fa-fw"></i>
+                        </a>
+                    </div>
                     <div class="row">
-                        <div class="col-3 mb-4">
+                        <div class="col-6 col-sm-3 mb-4">
                             <div class="col-12">
                                 Country
                             </div>
@@ -99,7 +110,7 @@
                                 <b>empty</b>
                             </div>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="col-6 col-sm-3 mb-2">
                             <div class="col-12">
                                 City/State
                             </div>
@@ -107,13 +118,13 @@
                                 <b>empty</b>
                             </div>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="d-none d-sm-block col-sm-3 mb-2">
                             <span></span>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="d-none d-sm-block col-sm-3 mb-2">
                             <span></span>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="col-6 col-sm-3 mb-2">
                             <div class="col-12">
                                 Postal Code
                             </div>
@@ -121,7 +132,7 @@
                                 <b>empty</b>
                             </div>
                         </div>
-                        <div class="col-3 mb-2">
+                        <div class="col-6 col-sm-3 mb-2">
                             <div class="col-12">
                                 Address
                             </div>
@@ -134,6 +145,7 @@
             </div>
         </div>
     </section>
+    <!-- Section EOF -->
     <footer th:replace="~{fragments/footer}"></footer>
     <th:block th:replace="~{fragments/script}"></th:block>
 </body>

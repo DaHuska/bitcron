@@ -579,18 +579,32 @@ body {
 
 /* Edit User Profile */
 .profile-container {
-    height: 80vh;
-    padding: 3rem 0;
-    width: 100%;
+    min-height: 82vh;
+    padding: 5rem 0;
     color: var(--secondary-color) !important;
 }
 
-.profile-aside-wrap-menu {
-    width: 20vw;
+.edit-profile-link {
+    color: var(--secondary-color) !important;
+}
+
+.edit-profile-link:hover {
+    color: var(--tertiary-color) !important;
+    transition: 0.3s;
+}
+
+.fa-pen-to-square {
+    font-size: 1.2rem;
+}
+
+.profile-sidebar-menu {
+    margin-left: 15rem;
+    width: 15vw;
 }
 
 .profile-info-container {
-    width: 70vw;
+    margin-right: 10rem;
+    width: 65vw;
 }
 
 div.personal-information, div.personal-address {
@@ -613,6 +627,22 @@ div.personal-information, div.personal-address {
 .options-link .btn {
     color: var(--secondary-color) !important;
     font-size: larger;
+}
+
+@media (max-width: 992px) {
+    .profile-sidebar-menu {
+        margin-left: 2rem;
+        width: 25vw;
+    }
+
+    .profile-info-container {
+        margin-right: 3rem;
+        width: 65vw;
+    }
+
+    .profile-container {
+        margin: 0 !important;
+    }
 }
 
 /* Link to Men and Women watches page */
