@@ -32,13 +32,14 @@ public class SecurityConfiguration {
                 authorizeRequests -> authorizeRequests
                         // All static resources which are situated in js, images, css are available for anyone
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
-                        // Allow anyone to see
-                        .requestMatchers("/", "/users/login", "/users/register", "/users/logout", "/users/profile").permitAll()
+                        // Requests anybody can see
+                        .requestMatchers("/", "/users/login", "/users/register", "/users/logout").permitAll()
                         .requestMatchers("/home").permitAll()
                         .requestMatchers("/products/watches", "/products/watches/{id}").permitAll()
                         .requestMatchers("/error", "/errors/404").permitAll()
                         .requestMatchers("/products/create-offer", "/products/add-watch").hasRole(String.valueOf(UserRole.ADMIN))
-                        // All other requests are authenticated
+                        // Authenticated requests
+                        .requestMatchers("/users/user-{id}", "/users/user-{id}/edit-profile").authenticated()
                         .anyRequest().authenticated()
         ).formLogin(
                 formLogin -> {
