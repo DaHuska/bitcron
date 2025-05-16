@@ -92,7 +92,7 @@
                 <div class="personal-address mt-5 border border-1 rounded-4 p-4">
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <h3><b>Address</b></h3>
-                        <a th:href="@{/users/user-{id}(id = ${user.getId()})/edit-profile}" class="edit-profile-link">
+                        <a th:href="@{/users/user-{id}/edit-profile(id = ${user.getId()})}" class="edit-profile-link">
                             <i class="fa-solid fa-pen-to-square fa-fw"></i>
                         </a>
                     </div>

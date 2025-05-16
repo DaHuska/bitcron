@@ -1,5 +1,6 @@
 package bg.softuni.bitchron.service.impl;
 
+import bg.softuni.bitchron.model.dto.UserEditDTO;
 import bg.softuni.bitchron.model.dto.UserRegisterDTO;
 import bg.softuni.bitchron.model.entity.UserEntity;
 import bg.softuni.bitchron.model.entity.UserRoleEntity;
@@ -43,6 +44,23 @@ public class UserServiceImpl implements UserService {
         userRepository.save(newUser);
     }
 
+    @Override
+    public void editUserProfile(UserEditDTO userEditDTO) {
+        // TODO: refactor map for user registration and separate both mappings for users and
+
+        UserEntity map = map(userEditDTO, modelMapper, userRepository);
+
+        userRepository.save(map);
+    }
+
+    private static UserEntity map(UserEditDTO userEditDTO, ModelMapper modelMapper, UserRepository userRepository) {
+        //TODO: finish mapping
+        Optional<UserEntity> user = userRepository.findById(userEditDTO.getId());
+        modelMapper.map(userEditDTO, user.get());
+
+        return user.get();
+    }
+
     private static UserEntity map(UserRegisterDTO userRegisterDTO, UserRepository userRepository, RoleRepository roleRepository) {
         return new UserEntity()
                 .setFirstName(userRegisterDTO.getFirstName())
@@ -80,12 +98,10 @@ public class UserServiceImpl implements UserService {
     private static void registerRoles(RoleRepository repo) {
         UserRoleEntity admin = new UserRoleEntity();
         admin.setRole(UserRole.ADMIN);
-
         repo.save(admin);
 
         UserRoleEntity user = new UserRoleEntity();
         user.setRole(UserRole.USER);
-
         repo.save(user);
     }
 }
