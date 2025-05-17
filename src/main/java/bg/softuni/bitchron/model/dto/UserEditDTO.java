@@ -1,7 +1,6 @@
 package bg.softuni.bitchron.model.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
 public class UserEditDTO {
@@ -14,22 +13,16 @@ public class UserEditDTO {
     @NotBlank
     private String lastName;
 
-    @NotBlank
     private String email;
 
-    @NotBlank
     private String phone;
 
-    @NotBlank
     private String country;
 
-    @NotBlank
     private String cityOrState;
 
-    @NotNull
-    private Integer postalCode;
+    private String postalCode;
 
-    @NotBlank
     private String address;
 
     public String getFirstName() {
@@ -102,11 +95,11 @@ public class UserEditDTO {
         return this;
     }
 
-    public Integer getPostalCode() {
+    public String getPostalCode() {
         return postalCode;
     }
 
-    public UserEditDTO setPostalCode(Integer postalCode) {
+    public UserEditDTO setPostalCode(String postalCode) {
         this.postalCode = postalCode;
 
         return this;
