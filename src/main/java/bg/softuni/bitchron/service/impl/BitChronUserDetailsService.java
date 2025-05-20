@@ -2,7 +2,6 @@ package bg.softuni.bitchron.service.impl;
 
 import bg.softuni.bitchron.model.entity.UserEntity;
 import bg.softuni.bitchron.model.entity.UserRoleEntity;
-import bg.softuni.bitchron.model.enums.UserRole;
 import bg.softuni.bitchron.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -10,8 +9,6 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
-import java.util.List;
 
 public class BitChronUserDetailsService implements UserDetailsService {
     private final UserRepository userRepository;
@@ -22,6 +19,7 @@ public class BitChronUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        // TODO: Fix error 403 when logging off (check if remember me cookie expired when you try to log off)
         return userRepository
                 .findByUsername(username)
                 .map(BitChronUserDetailsService::map)
@@ -32,7 +30,7 @@ public class BitChronUserDetailsService implements UserDetailsService {
         return User
                 .withUsername(userEntity.getUsername())
                 .password(userEntity.getPassword())
-                .authorities(userEntity.getRoles().stream().map(BitChronUserDetailsService::map).toList()) // TODO: add roles
+                .authorities(userEntity.getRoles().stream().map(BitChronUserDetailsService::map).toList())
                 .build();
     }
 
