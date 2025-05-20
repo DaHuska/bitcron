@@ -372,6 +372,10 @@ body {
     background-color: var(--main-color);
 }
 
+.offers__container a {
+    color: var(--main-color) !important;
+}
+
 .watches-container .banner {
     height: 60vh;
 }
