@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,35 +40,35 @@ public class UserServiceImpl implements UserService {
         }
 
         user.setPassword(encodePassword(user.getPassword()));
-        UserEntity newUser = map(user, userRepository, roleRepository);
+        UserEntity newUser = map(user, userRepository, roleRepository, modelMapper);
 
         userRepository.save(newUser);
     }
 
     @Override
     public void editUserProfile(UserEditDTO userEditDTO) {
-        // TODO: refactor map for user registration and separate both mappings for users and
+        UserEntity user = map(userEditDTO, userRepository, modelMapper);
 
-        UserEntity map = map(userEditDTO, modelMapper, userRepository);
-
-        userRepository.save(map);
+        userRepository.save(user);
     }
 
-    private static UserEntity map(UserEditDTO userEditDTO, ModelMapper modelMapper, UserRepository userRepository) {
-        //TODO: finish mapping
-        Optional<UserEntity> user = userRepository.findById(userEditDTO.getId());
-        modelMapper.map(userEditDTO, user.get());
+    private static UserEntity map(UserEditDTO userEditDTO, UserRepository userRepository, ModelMapper modelMapper) {
+        UserEntity user = userRepository.findById(userEditDTO.getId()).get();
 
-        return user.get();
+        modelMapper.map(userEditDTO, user);
+
+        return user.setModified(new Date());
     }
 
-    private static UserEntity map(UserRegisterDTO userRegisterDTO, UserRepository userRepository, RoleRepository roleRepository) {
-        return new UserEntity()
-                .setFirstName(userRegisterDTO.getFirstName())
-                .setLastName(userRegisterDTO.getLastName())
-                .setUsername(userRegisterDTO.getUsername())
-                .setPassword(userRegisterDTO.getPassword())
-                .setRoles(mapRoles(userRepository, roleRepository));
+    private static UserEntity map(UserRegisterDTO userRegisterDTO,
+                                  UserRepository userRepository,
+                                  RoleRepository roleRepository,
+                                  ModelMapper modelMapper) {
+        UserEntity user = new UserEntity();
+        
+        modelMapper.map(userRegisterDTO, user);
+
+        return user.setRoles(mapRoles(userRepository, roleRepository));
     }
 
     private String encodePassword(String password) {
