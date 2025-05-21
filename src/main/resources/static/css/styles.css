@@ -597,6 +597,12 @@ body {
     transition: 0.3s;
 }
 
+.profile-container .submit-btn {
+    border: solid 2px var(--secondary-color) !important;
+    font-size: larger;
+    color: var(--secondary-color) !important;
+}
+
 .fa-pen-to-square {
     font-size: 1.2rem;
 }
