@@ -9,13 +9,11 @@ import bg.softuni.bitchron.repository.ProductRepository;
 import bg.softuni.bitchron.service.ProductService;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
-import org.springframework.core.io.Resource;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @Service
@@ -31,6 +29,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Cacheable("offers")
     public List<OfferEntity> getAllOffers() {
         List<OfferEntity> offers = offerRepository.findAll();
 
@@ -38,6 +37,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Cacheable("watches")
     public List<WatchEntity> getAllWatches() {
         List<WatchEntity> watches = productRepository.findAll();
 

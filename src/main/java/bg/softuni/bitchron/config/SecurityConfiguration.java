@@ -6,6 +6,7 @@ import bg.softuni.bitchron.service.impl.BitChronUserDetailsService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,8 +18,8 @@ import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
 @Configuration
+@EnableCaching
 public class SecurityConfiguration {
-
     private final String rememberMeKey;
 
     public SecurityConfiguration(@Value("${bitcron.remember.me.key}") String rememberMeKey) {
