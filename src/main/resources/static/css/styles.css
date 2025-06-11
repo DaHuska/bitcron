@@ -176,6 +176,33 @@ body {
     color: var(--main-color);
 }
 
+/*Shopping cat modal*/
+.shop-cart-modal:hover, .shop-cart-modal:hover .fa-cart-shopping {
+    color: white !important;
+    background-color: #5569f0 !important;
+    transition: 0.5s;
+}
+
+#shopCartModal h5 {
+    color: var(--secondary-color) !important;
+}
+
+.modal-content {
+    background-color: var(--main-color) !important;
+    border: solid 2px var(--secondary-color) !important;
+    border-radius: 4px;
+}
+
+#shopCartModal .modal-footer button {
+    background-color: var(--tertiary-color);
+    color: white !important;
+}
+
+#shopCartModal .modal-footer button:hover {
+    background-color: #D63F63 !important;
+    transition: 0.5s;
+}
+
 /* Search bar */
 .search__bar__navigation {
     background-color: var(--main-color);
