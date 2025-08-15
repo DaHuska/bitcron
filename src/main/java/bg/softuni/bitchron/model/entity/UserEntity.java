@@ -57,6 +57,14 @@ public class UserEntity extends BaseEntity {
     )
     private List<UserRoleEntity> roles = new ArrayList<>();
 
+    @ManyToMany
+    @JoinTable(
+            name = "users_shopcart_products",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "offer_id")
+    )
+    private List<OfferEntity> shopCart = new ArrayList<>();
+
     @DateNotInTheFuture
     @NotNull
     @Column
@@ -125,6 +133,14 @@ public class UserEntity extends BaseEntity {
         this.roles = roles;
 
         return this;
+    }
+
+    public List<OfferEntity> getShopCart() {
+        return shopCart;
+    }
+
+    public void setShopCart(List<OfferEntity> shopCart) {
+        this.shopCart = shopCart;
     }
 
     public Date getModified() {
