@@ -4,7 +4,6 @@ import bg.softuni.bitchron.model.dto.OfferRegisterDTO;
 import bg.softuni.bitchron.model.dto.WatchDTO;
 import bg.softuni.bitchron.model.entity.OfferEntity;
 import bg.softuni.bitchron.model.entity.WatchEntity;
-import jakarta.validation.Valid;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
