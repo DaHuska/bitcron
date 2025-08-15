@@ -20,20 +20,26 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="card mb-2 modal-card">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="images/maserati aqua.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8 d-flex">
-              <div class="card-body">
-                <h5 class="card-title">Maserati</h5>
-                <p class="card-text">Ricordo</p>
-                <p class="card-text">This is some example description instead of using the boring lorem ipsum blabla</p>
+        <th:block sec:authorize="isAuthenticated()">
+          <div class="card mb-2 modal-card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/maserati aqua.png" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8 d-flex">
+                <div class="card-body">
+                  <h5 class="card-title">Maserati</h5>
+                  <p class="card-text">Ricordo</p>
+                  <p class="card-text">This is some example description instead of using the boring lorem ipsum blabla</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </th:block>
+<!--        Fix styling-->
+        <th:block sec:authorize="isAnonymous()">
+          <h1 class="text-info">You have to login</h1>
+        </th:block>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn" data-bs-dismiss="modal">Return to shopping</button>
